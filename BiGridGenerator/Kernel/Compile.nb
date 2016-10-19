@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4618,        153]
-NotebookOptionsPosition[      3622,        113]
-NotebookOutlinePosition[      4213,        137]
-CellTagsIndexPosition[      4128,        132]
+NotebookDataLength[      8356,        266]
+NotebookOptionsPosition[      6756,        207]
+NotebookOutlinePosition[      7580,        237]
+CellTagsIndexPosition[      7454,        231]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,13 +26,15 @@ Cell[BoxData["$ContextPath"], "Input",
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"\<\"MagicSquare`\"\>", 
+  RowBox[{"\<\"SortAlgorithm`\"\>", ",", "\<\"MagicSquare`\"\>", 
+   ",", "\<\"CloudObjectLoader`\"\>", 
    ",", "\<\"SymbolicMachineLearningLoader`\"\>", 
    ",", "\<\"StreamingLoader`\"\>", ",", "\<\"NeuralNetworks`\"\>", 
    ",", "\<\"IconizeLoader`\"\>", ",", "\<\"HTTPHandlingLoader`\"\>", 
-   ",", "\<\"CloudObjectLoader`\"\>", ",", "\<\"PacletManager`\"\>", 
-   ",", "\<\"System`\"\>", ",", "\<\"Global`\"\>"}], "}"}]], "Output",
- CellChangeTimes->{{3.685657936521076*^9, 3.685657950020793*^9}}]
+   ",", "\<\"PacletManager`\"\>", ",", "\<\"System`\"\>", 
+   ",", "\<\"Global`\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.685657936521076*^9, 3.685657950020793*^9}, 
+   3.685840010267851*^9, {3.6858401003012776`*^9, 3.6858401311894703`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -45,12 +47,16 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<main.mx\>\""}], 
-      "}"}], "]"}], ",", "\"\<MagicSquare`\>\""}], "]"}], ";"}], "\n", 
+      "}"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<MagicSquare`\>\"", ",", "\"\<SortAlgorithm`\>\""}], "}"}]}],
+    "]"}], ";"}], "\n", 
  RowBox[{
   RowBox[{"Quit", "[", "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.685657656189286*^9, 3.6856576793503284`*^9}, 
    3.685657743679457*^9, {3.6856578121645813`*^9, 3.685657841055133*^9}, {
-   3.685657882500106*^9, 3.685657939937832*^9}}],
+   3.685657882500106*^9, 3.685657939937832*^9}, {3.685840105053113*^9, 
+   3.6858401141518073`*^9}}],
 
 Cell[BoxData[
  TemplateBox[{
@@ -84,8 +90,8 @@ Cell[CellGroupData[{
 Cell[BoxData[
  StyleBox["\<\"Magic[n]\:53ef\:4ee5\:751f\:6210n\[Times]n\:7684\:5e7b\:65b9.\"\
 \>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6856579976335163`*^9},
- CellTags->"Info43685686797-2712045"],
+ CellChangeTimes->{3.685840135002145*^9},
+ CellTags->"Info43685868934-3225796"],
 
 Cell[BoxData[
  InterpretationBox[GridBox[{
@@ -103,16 +109,104 @@ Cell[BoxData[
      "RowsIndexed" -> {}}],
   Definition[MagicSquare`Magic],
   Editable->False]], "Print",
- CellChangeTimes->{3.6856579976335163`*^9},
- CellTags->"Info43685686797-2712045"]
+ CellChangeTimes->{3.6858401350106535`*^9},
+ CellTags->"Info43685868934-3225796"]
 }, Open  ]]
 }, Open  ]],
 
 Cell[BoxData["BinaryWrite"], "Input",
- CellChangeTimes->{{3.685666358370247*^9, 3.6856663583918457`*^9}}]
+ CellChangeTimes->{{3.685666358370247*^9, 3.6856663583918457`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", " ", "InsertionSort"}]], "Input",
+ CellChangeTimes->{{3.685840083877042*^9, 3.6858400850842695`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox["\<\"InsertionSort[n]\:663e\:793a\:5bf9n\:4e2a\:8f93\:5165\:6392\
+\:5e8f\:65f6\:7684\:63d2\:5165\:6392\:5e8f\:6392\:5e8f\:7f51\:7edc\"\>", 
+  "MSG"]], "Print", "PrintUsage",
+ CellChangeTimes->{3.6858401364155197`*^9},
+ CellTags->"Info53685868936-3225796"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Attributes", "[", "InsertionSort", "]"}], "=", 
+      RowBox[{"{", 
+       RowBox[{"Locked", ",", "Protected", ",", "ReadProtected"}], "}"}]}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[SortAlgorithm`InsertionSort],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.685840136420537*^9},
+ CellTags->"Info53685868936-3225796"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InsertionSort", "@", 
+  RowBox[{"RandomSample", "@", 
+   RowBox[{"Range", "@", "10"}]}]}]], "Input",
+ CellChangeTimes->{{3.6858401400701184`*^9, 3.6858401557076054`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "10", ",", "2", ",", "7", ",", "5", ",", "6", ",", "8", ",", 
+     "3", ",", "4", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "10", ",", "2", ",", "7", ",", "5", ",", "6", ",", "8", ",", 
+     "3", ",", "4", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "10", ",", "7", ",", "5", ",", "6", ",", "8", ",", 
+     "3", ",", "4", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "7", ",", "10", ",", "5", ",", "6", ",", "8", ",", 
+     "3", ",", "4", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "5", ",", "7", ",", "10", ",", "6", ",", "8", ",", 
+     "3", ",", "4", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "5", ",", "6", ",", "7", ",", "10", ",", "8", ",", 
+     "3", ",", "4", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "5", ",", "6", ",", "7", ",", "8", ",", "10", ",", 
+     "3", ",", "4", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "3", ",", "5", ",", "6", ",", "7", ",", "8", ",", 
+     "10", ",", "4", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8",
+      ",", "10", ",", "9"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8",
+      ",", "9", ",", "10"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.685840142982608*^9, 3.685840159794665*^9}}]
+}, Open  ]]
 },
 WindowSize->{775, 872},
-WindowMargins->{{Automatic, 544}, {-77, Automatic}},
+WindowMargins->{{Automatic, 262}, {-62, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (2016\:5e748\:670817\
 \:65e5)",
 StyleDefinitions->"Default.nb"
@@ -122,42 +216,59 @@ StyleDefinitions->"Default.nb"
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
- "Info43685686797-2712045"->{
-  Cell[2706, 83, 212, 4, 43, "Print",
-   CellTags->"Info43685686797-2712045"],
-  Cell[2921, 89, 565, 17, 22, "Print",
-   CellTags->"Info43685686797-2712045"]}
+ "Info43685868934-3225796"->{
+  Cell[2945, 89, 210, 4, 43, "Print",
+   CellTags->"Info43685868934-3225796"],
+  Cell[3158, 95, 565, 17, 22, "Print",
+   CellTags->"Info43685868934-3225796"]},
+ "Info53685868936-3225796"->{
+  Cell[4035, 127, 279, 5, 43, "Print",
+   CellTags->"Info53685868936-3225796"],
+  Cell[4317, 134, 548, 15, 22, "Print",
+   CellTags->"Info53685868936-3225796"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Info43685686797-2712045", 3945, 124}
+ {"Info43685868934-3225796", 7079, 218},
+ {"Info53685868936-3225796", 7269, 223}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 133, 2, 47, "Input"],
-Cell[716, 26, 461, 8, 82, "Output"]
+Cell[716, 26, 572, 10, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1214, 39, 529, 13, 84, "Input"],
-Cell[1746, 54, 569, 10, 24, "Message"]
+Cell[1325, 41, 657, 17, 84, "Input"],
+Cell[1985, 60, 569, 10, 24, "Message"]
 }, Open  ]],
-Cell[2330, 67, 204, 6, 47, "Input"],
+Cell[2569, 73, 204, 6, 47, "Input"],
 Cell[CellGroupData[{
-Cell[2559, 77, 122, 2, 30, "Input"],
+Cell[2798, 83, 122, 2, 30, "Input"],
 Cell[CellGroupData[{
-Cell[2706, 83, 212, 4, 43, "Print",
- CellTags->"Info43685686797-2712045"],
-Cell[2921, 89, 565, 17, 22, "Print",
- CellTags->"Info43685686797-2712045"]
+Cell[2945, 89, 210, 4, 43, "Print",
+ CellTags->"Info43685868934-3225796"],
+Cell[3158, 95, 565, 17, 22, "Print",
+ CellTags->"Info43685868934-3225796"]
 }, Open  ]]
 }, Open  ]],
-Cell[3513, 110, 105, 1, 47, "Input"]
+Cell[3750, 116, 105, 1, 47, "Input"],
+Cell[CellGroupData[{
+Cell[3880, 121, 130, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[4035, 127, 279, 5, 43, "Print",
+ CellTags->"Info53685868936-3225796"],
+Cell[4317, 134, 548, 15, 22, "Print",
+ CellTags->"Info53685868936-3225796"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4914, 155, 194, 4, 47, "Input"],
+Cell[5111, 161, 1629, 43, 144, "Output"]
+}, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
