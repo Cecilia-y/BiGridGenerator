@@ -1,0 +1,557 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     18184,        548]
+NotebookOptionsPosition[     14510,        422]
+NotebookOutlinePosition[     14939,        439]
+CellTagsIndexPosition[     14896,        436]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellChangeTimes->{3.410894606249012*^9},
+ CellID->6298],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellLabel->
+  "Categorization: metadata such as page URI, context, and type of \
+documentation page",
+ CellID->1122911449],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["PretendBilityGenerator", "Categorization",
+ CellChangeTimes->{{3.410888631979097*^9, 3.4108886398616886`*^9}, {
+  3.4108896172604647`*^9, 3.41088961873242*^9}, {3.6855745372474318`*^9, 
+  3.685574544194497*^9}},
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["PretendBilityGenerator`", "Categorization",
+ CellChangeTimes->{{3.410888643096857*^9, 3.4108886502482805`*^9}, {
+  3.6855745400329247`*^9, 3.685574543395439*^9}},
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["PretendBilityGenerator/guide/PretendBilityGenerator", "Categorization",
+ CellChangeTimes->{{3.410888656057561*^9, 3.410888667776281*^9}, {
+  3.41088907595706*^9, 3.410889087757671*^9}, {3.685574554340948*^9, 
+  3.685574569035083*^9}},
+ CellLabel->"URI",
+ CellID->31593272]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellLabel->
+  "Keywords: contains a list of words or phrases to be used as keywords for \
+this page when indexing",
+ CellID->1427428552],
+
+Cell["XXXX", "Keywords",
+ CellID->1251852827]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellLabel->
+  "Details: metadata on developer(s) for the functionality described on this \
+page, along with any general comments about the page",
+ CellID->556663832],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->638296139],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->310241918]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Pretend Bility Generator", "GuideTitle",
+ CellChangeTimes->{{3.36793376812776*^9, 3.36793377173715*^9}, {
+   3.3938484413819356`*^9, 3.3938484440301104`*^9}, 3.6855742637964067`*^9},
+ CellLabel->"The page title",
+ CellID->942062912],
+
+Cell[TextData[{
+ "The built\[Hyphen]in functions ",
+ Cell[BoxData[
+  ButtonBox["D",
+   BaseStyle->"Link"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["Limit",
+   BaseStyle->"Link"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["Residue",
+   BaseStyle->"Link"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["Series",
+   BaseStyle->"Link"]], "InlineFormula"],
+ " perform computations using symbolic and analytic methods. The functions ",
+ Cell[BoxData[
+  ButtonBox["ND",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/ND"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["NLimit",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NLimit"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["NResidue",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NResidue"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["NSeries",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NSeries"]], "InlineFormula"],
+ ", in this package, are the numerical versions of these functions",
+ "."
+}], "GuideAbstract",
+ CellChangeTimes->{{3.3683613778011*^9, 3.36836159299273*^9}, {
+   3.371401237798204*^9, 3.371401390723524*^9}, {3.37510431837531*^9, 
+   3.375104363635188*^9}, {3.37521041270959*^9, 3.375210444675766*^9}, 
+   3.3798033879407587`*^9},
+ CellLabel->
+  "An optional paragraph describing the package's functionality, motivations, \
+etc.",
+ CellID->2001916300]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "GuideFunctionsSection",
+ CellID->1866139230],
+
+Cell[CellGroupData[{
+
+Cell["\:76ca\:667a\:7c7b\:6e38\:620f", "GuideFunctionsSubsection",
+ CellChangeTimes->{{3.36793377965908*^9, 3.3679337825341*^9}, {
+   3.685574360917264*^9, 3.6855743674463887`*^9}, 3.6855745073996224`*^9},
+ CellLabel->
+  "A subsection header, used for grouping similar symbols on a guide page",
+ CellID->173109221],
+
+Cell[TextData[{
+ ButtonBox["MagicSquare",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/MagicSquare"],
+ " \[LongDash] \:5e7b\:65b9\:5305+\:5e7b\:7acb\:65b9\:5305"
+}], "GuideText",
+ CellChangeTimes->{{3.36793378554974*^9, 3.367933786331*^9}, {
+  3.3679339389726*^9, 3.3679339433945*^9}, {3.36793408792665*^9, 
+  3.36793408794227*^9}, {3.36819251524642*^9, 3.36819251684009*^9}, {
+  3.685574377707374*^9, 3.6855743994035273`*^9}},
+ CellID->203374175],
+
+Cell["\<\
+ \[LongDash] numerical derivative of a function at a point\
+\>", "GuideText",
+ CellChangeTimes->{{3.36793378856539*^9, 3.36793378870601*^9}, {
+   3.3679339508633*^9, 3.36793396784778*^9}, {3.36793409030157*^9, 
+   3.36793409031719*^9}, 3.685575143461857*^9},
+ CellID->1463276848]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiter",
+ CellID->195981991],
+
+Cell[CellGroupData[{
+
+Cell["\:7b97\:6cd5\:53ef\:89c6\:5316", "GuideFunctionsSubsection",
+ CellChangeTimes->{{3.36793380553425*^9, 3.36793381639369*^9}, {
+  3.685574512152203*^9, 3.68557451443637*^9}},
+ CellID->137740830],
+
+Cell[TextData[{
+ ButtonBox["SortAlgorithm",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortAlgorithm"],
+ " \[LongDash]\:51e0\:79cd\:6392\:5e8f\:7b97\:6cd5\:7684\:6267\:884c\:8fc7\
+\:7a0b"
+}], "GuideText",
+ CellChangeTimes->{{3.36793382228435*^9, 3.36793382392499*^9}, {
+  3.36793399905111*^9, 3.36793400559803*^9}, {3.36793409228588*^9, 
+  3.36793409230151*^9}, {3.6855750876538544`*^9, 3.685575094883299*^9}, {
+  3.6855751283261895`*^9, 3.685575161075151*^9}},
+ CellID->39625104],
+
+Cell[TextData[{
+ ButtonBox["SortShow ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortShow"],
+ "\[LongDash] \:53ef\:89c6\:5316\:6570\:636e\:7684\:53d8\:5316\:8fc7\:7a0b"
+}], "GuideText",
+ CellChangeTimes->{{3.36793382670626*^9, 3.36793382762814*^9}, {
+  3.36793401948874*^9, 3.36793402844192*^9}, {3.36793409448894*^9, 
+  3.36793409450456*^9}, {3.6855750680711517`*^9, 3.685575131429744*^9}, {
+  3.6855751677275825`*^9, 3.6855751764265203`*^9}},
+ CellID->547646493],
+
+Cell[TextData[{
+ ButtonBox["SortNe",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortNe"],
+ "t \[LongDash] \:663e\:793a\:548c\:5206\:6790\:6392\:5e8f\:7f51\:7edc"
+}], "GuideText",
+ CellChangeTimes->{{3.36793382670626*^9, 3.36793382762814*^9}, {
+  3.36793401948874*^9, 3.36793402844192*^9}, {3.36793409448894*^9, 
+  3.36793409450456*^9}, {3.6855750680711517`*^9, 3.6855750691172085`*^9}, {
+  3.685575111747547*^9, 3.685575134131349*^9}, {3.6855751777047105`*^9, 
+  3.68557519077507*^9}},
+ CellID->552333014],
+
+Cell["\<\
+\[LongDash] numerical series expansion of a function\
+\>", "GuideText",
+ CellChangeTimes->{{3.36793382670626*^9, 3.36793382762814*^9}, {
+   3.36793401948874*^9, 3.36793402844192*^9}, {3.36793409448894*^9, 
+   3.36793409450456*^9}, {3.6855750680711517`*^9, 3.6855750691172085`*^9}, 
+   3.685575140129077*^9},
+ CellID->67928285]
+}, Open  ]],
+
+Cell["\t", "GuideDelimiter",
+ CellID->195090415],
+
+Cell[CellGroupData[{
+
+Cell["XXXXX", "GuideFunctionsSubsection",
+ CellChangeTimes->{{3.36793380553425*^9, 3.36793381639369*^9}, {
+   3.685574512152203*^9, 3.68557451443637*^9}, 3.6855752400168996`*^9},
+ CellID->398450557],
+
+Cell[TextData[{
+ ButtonBox["SortAlgorithm",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortAlgorithm"],
+ " \[LongDash]\:51e0\:79cd\:6392\:5e8f\:7b97\:6cd5\:7684\:6267\:884c\:8fc7\
+\:7a0b"
+}], "GuideText",
+ CellChangeTimes->{{3.36793382228435*^9, 3.36793382392499*^9}, {
+  3.36793399905111*^9, 3.36793400559803*^9}, {3.36793409228588*^9, 
+  3.36793409230151*^9}, {3.6855750876538544`*^9, 3.685575094883299*^9}, {
+  3.6855751283261895`*^9, 3.685575161075151*^9}},
+ CellID->408115244],
+
+Cell[TextData[{
+ ButtonBox["SortShow ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortShow"],
+ "\[LongDash] \:53ef\:89c6\:5316\:6570\:636e\:7684\:53d8\:5316\:8fc7\:7a0b"
+}], "GuideText",
+ CellChangeTimes->{{3.36793382670626*^9, 3.36793382762814*^9}, {
+  3.36793401948874*^9, 3.36793402844192*^9}, {3.36793409448894*^9, 
+  3.36793409450456*^9}, {3.6855750680711517`*^9, 3.685575131429744*^9}, {
+  3.6855751677275825`*^9, 3.6855751764265203`*^9}},
+ CellID->6622359],
+
+Cell[TextData[{
+ ButtonBox["SortNe",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortNe"],
+ "t \[LongDash] \:663e\:793a\:548c\:5206\:6790\:6392\:5e8f\:7f51\:7edc"
+}], "GuideText",
+ CellChangeTimes->{{3.36793382670626*^9, 3.36793382762814*^9}, {
+  3.36793401948874*^9, 3.36793402844192*^9}, {3.36793409448894*^9, 
+  3.36793409450456*^9}, {3.6855750680711517`*^9, 3.6855750691172085`*^9}, {
+  3.685575111747547*^9, 3.685575134131349*^9}, {3.6855751777047105`*^9, 
+  3.68557519077507*^9}},
+ CellID->13306225],
+
+Cell["\<\
+\[LongDash] numerical series expansion of a function\
+\>", "GuideText",
+ CellChangeTimes->{{3.36793382670626*^9, 3.36793382762814*^9}, {
+   3.36793401948874*^9, 3.36793402844192*^9}, {3.36793409448894*^9, 
+   3.36793409450456*^9}, {3.6855750680711517`*^9, 3.6855750691172085`*^9}, 
+   3.685575140129077*^9},
+ CellID->28797806]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "GuideTutorialsSection",
+ CellChangeTimes->{3.381931905408058*^9},
+ CellLabel->"Tutorials: links to related tutorials",
+ CellID->415694126],
+
+Cell[TextData[ButtonBox["\:5bc6\:7801\:76d8\:7684\:7814\:7a76",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:PretendBilityGenerator/tutorial/\:5bc6\:7801\:76d8\:7684\:7814\:7a76\
+"]], "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}, {
+  3.685575812505866*^9, 3.6855758295863094`*^9}},
+ CellID->376708339],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->65582854],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->694807863],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->76047396],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->1053974646],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->156930324],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->846931172],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->448726404],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->745933420],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->435594398],
+
+Cell["zzz", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.6855754012855177`*^9}},
+ CellID->65135484],
+
+Cell["\:6dfb\:52a0\:65b0\:6559\:7a0b", "GuideTutorial",
+ CellChangeTimes->{{3.385403835153248*^9, 3.3854038442159214`*^9}, {
+  3.4108911521705427`*^9, 3.410891155326934*^9}, {3.685575279253184*^9, 
+  3.6855753467431216`*^9}, {3.6855753940398293`*^9, 3.685575421302798*^9}},
+ CellID->182083447]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "GuideMoreAboutSection",
+ CellChangeTimes->{3.381931902376769*^9},
+ CellLabel->"More About: links to related guide pages",
+ CellID->23220180],
+
+Cell[TextData[ButtonBox["Numerical Evaluation & Precision",
+ BaseStyle->"Link",
+ ButtonData:>
+  "paclet:guide/NumericalEvaluationAndPrecision"]], "GuideMoreAbout",
+ CellChangeTimes->{{3.36827561369415*^9, 3.36827561820986*^9}, {
+  3.36827569482071*^9, 3.36827569485196*^9}},
+ CellID->1567025153],
+
+Cell[TextData[ButtonBox["Numerical Functions",
+ BaseStyle->"Link",
+ ButtonData:>"paclet:guide/NumericalFunctions"]], "GuideMoreAbout",
+ CellChangeTimes->{{3.368275631882*^9, 3.36827563535081*^9}, {
+  3.36827570227397*^9, 3.3682757022896*^9}},
+ CellID->252299663]
+}, Open  ]],
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellLabel->
+  "Related Links: these links can be to any related page, including web pages",
+ CellID->415694148]
+},
+WindowSize->{700, 770},
+WindowMargins->{{Automatic, 383}, {Automatic, -2}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (2013\:5e742\:670813\
+\:65e5)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStyles.nb", 
+  CharacterEncoding -> "CP936"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 359, 15, 22, "History",
+ CellID->6298],
+Cell[CellGroupData[{
+Cell[941, 39, 171, 4, 41, "CategorizationSection",
+ CellID->1122911449],
+Cell[1115, 45, 78, 2, 31, "Categorization",
+ CellID->686433507],
+Cell[1196, 49, 264, 5, 31, "Categorization",
+ CellID->605800465],
+Cell[1463, 56, 211, 4, 31, "Categorization",
+ CellID->468444828],
+Cell[1677, 62, 278, 5, 31, "Categorization",
+ CellID->31593272]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1992, 72, 173, 4, 41, "KeywordsSection",
+ CellID->1427428552],
+Cell[2168, 78, 45, 1, 17, "Keywords",
+ CellID->1251852827]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2250, 84, 200, 4, 31, "DetailsSection",
+ CellID->556663832],
+Cell[2453, 90, 69, 2, 31, "Details",
+ CellID->638296139],
+Cell[2525, 94, 67, 2, 31, "Details",
+ CellID->310241918]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2629, 101, 238, 4, 90, "GuideTitle",
+ CellID->942062912],
+Cell[2870, 107, 1469, 47, 71, "GuideAbstract",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4376, 159, 54, 1, 68, "GuideFunctionsSection",
+ CellID->1866139230],
+Cell[CellGroupData[{
+Cell[4455, 164, 314, 5, 47, "GuideFunctionsSubsection",
+ CellID->173109221],
+Cell[4772, 171, 472, 10, 20, "GuideText",
+ CellID->203374175],
+Cell[5247, 183, 289, 6, 20, "GuideText",
+ CellID->1463276848]
+}, Open  ]],
+Cell[5551, 192, 48, 1, 26, "GuideDelimiter",
+ CellID->195981991],
+Cell[CellGroupData[{
+Cell[5624, 197, 198, 3, 33, "GuideFunctionsSubsection",
+ CellID->137740830],
+Cell[5825, 202, 507, 11, 20, "GuideText",
+ CellID->39625104],
+Cell[6335, 215, 493, 10, 20, "GuideText",
+ CellID->547646493],
+Cell[6831, 227, 532, 11, 20, "GuideText",
+ CellID->552333014],
+Cell[7366, 240, 336, 7, 20, "GuideText",
+ CellID->67928285]
+}, Open  ]],
+Cell[7717, 250, 48, 1, 26, "GuideDelimiter",
+ CellID->195090415],
+Cell[CellGroupData[{
+Cell[7790, 255, 198, 3, 33, "GuideFunctionsSubsection",
+ CellID->398450557],
+Cell[7991, 260, 508, 11, 20, "GuideText",
+ CellID->408115244],
+Cell[8502, 273, 491, 10, 20, "GuideText",
+ CellID->6622359],
+Cell[8996, 285, 531, 11, 20, "GuideText",
+ CellID->13306225],
+Cell[9530, 298, 336, 7, 20, "GuideText",
+ CellID->28797806]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9915, 311, 157, 3, 84, "GuideTutorialsSection",
+ CellID->415694126],
+Cell[10075, 316, 490, 9, 20, "GuideTutorial",
+ CellID->376708339],
+Cell[10568, 327, 267, 4, 20, "GuideTutorial",
+ CellID->65582854],
+Cell[10838, 333, 268, 4, 20, "GuideTutorial",
+ CellID->694807863],
+Cell[11109, 339, 267, 4, 20, "GuideTutorial",
+ CellID->76047396],
+Cell[11379, 345, 269, 4, 20, "GuideTutorial",
+ CellID->1053974646],
+Cell[11651, 351, 268, 4, 20, "GuideTutorial",
+ CellID->156930324],
+Cell[11922, 357, 268, 4, 20, "GuideTutorial",
+ CellID->846931172],
+Cell[12193, 363, 268, 4, 20, "GuideTutorial",
+ CellID->448726404],
+Cell[12464, 369, 268, 4, 20, "GuideTutorial",
+ CellID->745933420],
+Cell[12735, 375, 268, 4, 20, "GuideTutorial",
+ CellID->435594398],
+Cell[13006, 381, 267, 4, 20, "GuideTutorial",
+ CellID->65135484],
+Cell[13276, 387, 293, 4, 20, "GuideTutorial",
+ CellID->182083447]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13606, 396, 160, 3, 84, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[13769, 401, 295, 6, 20, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[14067, 409, 262, 5, 20, "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+Cell[14344, 417, 162, 3, 84, "GuideRelatedLinksSection",
+ CellID->415694148]
+}
+]
+*)
+
+(* End of internal cache information *)

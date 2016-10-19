@@ -1,0 +1,163 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4618,        153]
+NotebookOptionsPosition[      3622,        113]
+NotebookOutlinePosition[      4213,        137]
+CellTagsIndexPosition[      4128,        132]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData["$ContextPath"], "Input",
+ CellChangeTimes->{
+  3.6856565740907917`*^9, {3.6856576836699104`*^9, 3.685657690609494*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"MagicSquare`\"\>", 
+   ",", "\<\"SymbolicMachineLearningLoader`\"\>", 
+   ",", "\<\"StreamingLoader`\"\>", ",", "\<\"NeuralNetworks`\"\>", 
+   ",", "\<\"IconizeLoader`\"\>", ",", "\<\"HTTPHandlingLoader`\"\>", 
+   ",", "\<\"CloudObjectLoader`\"\>", ",", "\<\"PacletManager`\"\>", 
+   ",", "\<\"System`\"\>", ",", "\<\"Global`\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.685657936521076*^9, 3.685657950020793*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<main.mx\>\""}], 
+      "}"}], "]"}], ",", "\"\<MagicSquare`\>\""}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Quit", "[", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.685657656189286*^9, 3.6856576793503284`*^9}, 
+   3.685657743679457*^9, {3.6856578121645813`*^9, 3.685657841055133*^9}, {
+   3.685657882500106*^9, 3.685657939937832*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "List","cxt",
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", \\\"\\\\\\\"`*\\\\\\\"\\\", \\\"}\\\"}]\\) \
+\:4e2d\:4f4d\:7f6e \\!\\(\\*RowBox[{\\\"1\\\"}]\\) \:5904\:6307\:5b9a\:4e86\
+\:4e00\:4e2a\:65e0\:6548\:7684\:4e0a\:4e0b\:6587. \:4e00\:4e2a\:4e0a\:4e0b\
+\:6587\:5fc5\:987b\:5305\:542b\:4ee5 \\!\\(\\*RowBox[{\\\"\\\\\\\"`\\\\\\\"\\\
+\"}]\\) \:5206\:9694\:548c\:7ed3\:675f\:7684\:6709\:6548\:7684\:5b57\:7b26\
+\:540d\:79f0.\"",2,47,2,31799977739641708666,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.685657694165705*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  RowBox[{"FileNameJoin", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<main.mx\>\""}], "}"}],
+    "]"}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"??", " ", "Magic"}]], "Input",
+ CellChangeTimes->{{3.685657991480649*^9, 3.6856579970879555`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox["\<\"Magic[n]\:53ef\:4ee5\:751f\:6210n\[Times]n\:7684\:5e7b\:65b9.\"\
+\>", "MSG"]], "Print", "PrintUsage",
+ CellChangeTimes->{3.6856579976335163`*^9},
+ CellTags->"Info43685686797-2712045"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Attributes", "[", "Magic", "]"}], "=", 
+      RowBox[{"{", 
+       RowBox[{
+       "Listable", ",", "Locked", ",", "Protected", ",", "ReadProtected"}], 
+       "}"}]}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[MagicSquare`Magic],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6856579976335163`*^9},
+ CellTags->"Info43685686797-2712045"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData["BinaryWrite"], "Input",
+ CellChangeTimes->{{3.685666358370247*^9, 3.6856663583918457`*^9}}]
+},
+WindowSize->{775, 872},
+WindowMargins->{{Automatic, 544}, {-77, Automatic}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (2016\:5e748\:670817\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info43685686797-2712045"->{
+  Cell[2706, 83, 212, 4, 43, "Print",
+   CellTags->"Info43685686797-2712045"],
+  Cell[2921, 89, 565, 17, 22, "Print",
+   CellTags->"Info43685686797-2712045"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info43685686797-2712045", 3945, 124}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 133, 2, 47, "Input"],
+Cell[716, 26, 461, 8, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1214, 39, 529, 13, 84, "Input"],
+Cell[1746, 54, 569, 10, 24, "Message"]
+}, Open  ]],
+Cell[2330, 67, 204, 6, 47, "Input"],
+Cell[CellGroupData[{
+Cell[2559, 77, 122, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[2706, 83, 212, 4, 43, "Print",
+ CellTags->"Info43685686797-2712045"],
+Cell[2921, 89, 565, 17, 22, "Print",
+ CellTags->"Info43685686797-2712045"]
+}, Open  ]]
+}, Open  ]],
+Cell[3513, 110, 105, 1, 47, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
