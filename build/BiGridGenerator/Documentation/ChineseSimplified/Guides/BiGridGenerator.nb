@@ -1,0 +1,356 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9878,        346]
+NotebookOptionsPosition[      6390,        241]
+NotebookOutlinePosition[      7699,        274]
+CellTagsIndexPosition[      7656,        271]
+WindowTitle->BiGrid Generator - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "GuideColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[CellGroupData[{
+
+Cell["BiGrid Generator", "GuideTitle",
+ CellLabel->"The page title",
+ CellID->942062912],
+
+Cell[TextData[{
+ "The built\[Hyphen]in functions ",
+ Cell[TextData[ButtonBox["D",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/D"]], "InlineFunctionSans"],
+ ", ",
+ Cell[TextData[ButtonBox["Limit",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Limit"]], "InlineFunctionSans"],
+ ", ",
+ Cell[TextData[ButtonBox["Residue",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Residue"]], "InlineFunctionSans"],
+ " and ",
+ Cell[TextData[ButtonBox["Series",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Series"]], "InlineFunctionSans"],
+ " perform computations using symbolic and analytic methods. The functions ",
+ Cell[TextData[ButtonBox["ND",
+  BaseStyle->"Link",
+  ButtonData->"paclet:NumericalAnalysis/ref/ND"]], "InlineFunctionSans"],
+ ", ",
+ Cell[TextData[ButtonBox["NLimit",
+  BaseStyle->"Link",
+  ButtonData->"paclet:NumericalAnalysis/ref/NLimit"]], "InlineFunctionSans"],
+ ", ",
+ Cell[TextData[ButtonBox["NResidue",
+  BaseStyle->"Link",
+  ButtonData->"paclet:NumericalAnalysis/ref/NResidue"]], "InlineFunctionSans"],
+ " and ",
+ Cell[TextData[ButtonBox["NSeries",
+  BaseStyle->"Link",
+  ButtonData->"paclet:NumericalAnalysis/ref/NSeries"]], "InlineFunctionSans"],
+ ", in this package, are the numerical versions of these functions",
+ "."
+}], "GuideAbstract",
+ CellLabel->
+  "An optional paragraph describing the package's functionality, motivations, \
+etc.",
+ CellID->2001916300],
+
+Cell[CellGroupData[{
+
+Cell["\:76ca\:667a\:7c7b\:6e38\:620f", "GuideFunctionsSubsection",
+ CellLabel->
+  "A subsection header, used for grouping similar symbols on a guide page",
+ CellID->173109221],
+
+Cell[TextData[{
+ ButtonBox["MagicSquare",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/MagicSquare"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " \:5e7b\:65b9\:5305+\:5e7b\:7acb\:65b9\:5305"
+}], "GuideText",
+ CellID->203374175],
+
+Cell["RockPaperScissors  \[LongDash] \:731c\:62f3\:6e38\:620f\:5305", \
+"GuideText",
+ CellID->1463276848],
+
+Cell["\t", "GuideDelimiterSubsection",
+ CellID->195981991]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:7b97\:6cd5\:53ef\:89c6\:5316", "GuideFunctionsSubsection",
+ CellID->137740830],
+
+Cell[TextData[{
+ ButtonBox["SortAlgorithm",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortAlgorithm"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ "\:51e0\:79cd\:6392\:5e8f\:7b97\:6cd5\:7684\:6267\:884c\:8fc7\:7a0b"
+}], "GuideText",
+ CellID->39625104],
+
+Cell[TextData[{
+ ButtonBox["SortShow ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortShow"],
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " \:53ef\:89c6\:5316\:6570\:636e\:7684\:53d8\:5316\:8fc7\:7a0b"
+}], "GuideText",
+ CellID->547646493],
+
+Cell[TextData[{
+ ButtonBox["SortNe",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortNe"],
+ "twork \[LongDash] \:663e\:793a\:548c\:5206\:6790\:6392\:5e8f\:7f51\:7edc"
+}], "GuideText",
+ CellID->552333014],
+
+Cell["\<\
+\[LongDash] numerical series expansion of a function\
+\>", "GuideText",
+ CellID->67928285],
+
+Cell[TextData[{
+ ButtonBox["SortAlgorithm",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortAlgorithm"],
+ " ",
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ "\:51e0\:79cd\:6392\:5e8f\:7b97\:6cd5\:7684\:6267\:884c\:8fc7\:7a0b"
+}], "GuideText",
+ CellID->408115244],
+
+Cell[TextData[{
+ ButtonBox["SortShow ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortShow"],
+ StyleBox["\[LongDash]", "GuideEmDash"],
+ " \:53ef\:89c6\:5316\:6570\:636e\:7684\:53d8\:5316\:8fc7\:7a0b"
+}], "GuideText",
+ CellID->6622359],
+
+Cell[TextData[{
+ ButtonBox["SortNe",
+  BaseStyle->"Link",
+  ButtonData->"paclet:PretendBilityGenerator/ref/SortNe"],
+ "t \[LongDash] \:663e\:793a\:548c\:5206\:6790\:6392\:5e8f\:7f51\:7edc"
+}], "GuideText",
+ CellID->13306225],
+
+Cell["\<\
+\[LongDash] numerical series expansion of a function\
+\>", "GuideText",
+ CellID->28797806]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:6559\:7a0b", "GuideTutorialsSection",
+ CellLabel->"Tutorials: links to related tutorials",
+ CellID->415694126],
+
+Cell[TextData[ButtonBox["\:5bc6\:7801\:76d8\:7684\:7814\:7a76",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:PretendBilityGenerator/tutorial/\:5bc6\:7801\:76d8\:7684\:7814\:7a76\
+"]], "GuideTutorial",
+ CellID->376708339],
+
+Cell["zzz", "GuideTutorial",
+ CellID->65582854],
+
+Cell["zzz", "GuideTutorial",
+ CellID->694807863],
+
+Cell["zzz", "GuideTutorial",
+ CellID->76047396],
+
+Cell["zzz", "GuideTutorial",
+ CellID->1053974646],
+
+Cell["zzz", "GuideTutorial",
+ CellID->156930324],
+
+Cell["zzz", "GuideTutorial",
+ CellID->846931172],
+
+Cell["zzz", "GuideTutorial",
+ CellID->448726404],
+
+Cell["zzz", "GuideTutorial",
+ CellID->745933420],
+
+Cell["zzz", "GuideTutorial",
+ CellID->435594398],
+
+Cell["zzz", "GuideTutorial",
+ CellID->65135484],
+
+Cell["\:6dfb\:52a0\:65b0\:6559\:7a0b", "GuideTutorial",
+ CellID->182083447]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:66f4\:591a\:5173\:4e8e", "GuideMoreAboutSection",
+ CellID->23220180],
+
+Cell[TextData[ButtonBox["Numerical Evaluation & Precision",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:guide/NumericalEvaluationAndPrecision"]], "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell[TextData[ButtonBox["Numerical Functions",
+ BaseStyle->"Link",
+ ButtonData->"paclet:guide/NumericalFunctions"]], "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"BiGrid Generator - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2016, 10, 20, 18, 30, 59.0230555}", "context" -> 
+    "PretendBilityGenerator`", "keywords" -> {}, "index" -> True, "label" -> 
+    "Pretend Bility Generator Guide", "language" -> "zh", "paclet" -> 
+    "PretendBilityGenerator", "status" -> "None", "summary" -> 
+    "The built-in functions D, Limit, Residue and Series perform computations \
+using symbolic and analytic methods. The functions ND, NLimit, NResidue and \
+NSeries, in this package, are the numerical versions of these functions.", 
+    "synonyms" -> {}, "title" -> "BiGrid Generator", "type" -> "Guide", "uri" -> 
+    "PretendBilityGenerator/guide/PretendBilityGenerator"}, "LinkTrails" -> 
+  "", "SearchTextTranslated" -> ""},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (2013\:5e742\:670813\
+\:65e5)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference-ja.nb", 
+  CharacterEncoding -> "CP936"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[609, 21, 75, 1, 70, "GuideColorBar"],
+Cell[687, 24, 209, 6, 70, "LinkTrail"],
+Cell[CellGroupData[{
+Cell[921, 34, 88, 2, 70, "GuideTitle",
+ CellID->942062912],
+Cell[1012, 38, 1381, 39, 70, "GuideAbstract",
+ CellID->2001916300],
+Cell[CellGroupData[{
+Cell[2418, 81, 175, 3, 70, "GuideFunctionsSubsection",
+ CellID->173109221],
+Cell[2596, 86, 258, 8, 70, "GuideText",
+ CellID->203374175],
+Cell[2857, 96, 105, 2, 70, "GuideText",
+ CellID->1463276848],
+Cell[2965, 100, 58, 1, 70, "GuideDelimiterSubsection",
+ CellID->195981991]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3060, 106, 86, 1, 70, "GuideFunctionsSubsection",
+ CellID->137740830],
+Cell[3149, 109, 283, 8, 70, "GuideText",
+ CellID->39625104],
+Cell[3435, 119, 264, 7, 70, "GuideText",
+ CellID->547646493],
+Cell[3702, 128, 229, 6, 70, "GuideText",
+ CellID->552333014],
+Cell[3934, 136, 100, 3, 70, "GuideText",
+ CellID->67928285],
+Cell[4037, 141, 284, 8, 70, "GuideText",
+ CellID->408115244],
+Cell[4324, 151, 262, 7, 70, "GuideText",
+ CellID->6622359],
+Cell[4589, 160, 224, 6, 70, "GuideText",
+ CellID->13306225],
+Cell[4816, 168, 100, 3, 70, "GuideText",
+ CellID->28797806]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4965, 177, 118, 2, 70, "GuideTutorialsSection",
+ CellID->415694126],
+Cell[5086, 181, 219, 5, 70, "GuideTutorial",
+ CellID->376708339],
+Cell[5308, 188, 47, 1, 70, "GuideTutorial",
+ CellID->65582854],
+Cell[5358, 191, 48, 1, 70, "GuideTutorial",
+ CellID->694807863],
+Cell[5409, 194, 47, 1, 70, "GuideTutorial",
+ CellID->76047396],
+Cell[5459, 197, 49, 1, 70, "GuideTutorial",
+ CellID->1053974646],
+Cell[5511, 200, 48, 1, 70, "GuideTutorial",
+ CellID->156930324],
+Cell[5562, 203, 48, 1, 70, "GuideTutorial",
+ CellID->846931172],
+Cell[5613, 206, 48, 1, 70, "GuideTutorial",
+ CellID->448726404],
+Cell[5664, 209, 48, 1, 70, "GuideTutorial",
+ CellID->745933420],
+Cell[5715, 212, 48, 1, 70, "GuideTutorial",
+ CellID->435594398],
+Cell[5766, 215, 47, 1, 70, "GuideTutorial",
+ CellID->65135484],
+Cell[5816, 218, 75, 1, 70, "GuideTutorial",
+ CellID->182083447]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5928, 224, 76, 1, 70, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[6007, 227, 184, 4, 70, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[6194, 233, 154, 3, 70, "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+Cell[6363, 239, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

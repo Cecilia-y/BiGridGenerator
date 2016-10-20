@@ -10,203 +10,86 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8356,        266]
-NotebookOptionsPosition[      6756,        207]
-NotebookOutlinePosition[      7580,        237]
-CellTagsIndexPosition[      7454,        231]
+NotebookDataLength[      3708,        113]
+NotebookOptionsPosition[      3201,         90]
+NotebookOutlinePosition[      3558,        106]
+CellTagsIndexPosition[      3515,        103]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:6d88\:9664\:5f71\:54cd", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Quit", "[", "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{
+  3.6856565740907917`*^9, {3.6856576836699104`*^9, 3.685657690609494*^9}, {
+   3.6859450882415757`*^9, 3.6859451314685235`*^9}}],
 
 Cell[CellGroupData[{
-Cell[BoxData["$ContextPath"], "Input",
- CellChangeTimes->{
-  3.6856565740907917`*^9, {3.6856576836699104`*^9, 3.685657690609494*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\:8bb0\:5f55\:4e0a\:4e0b\:6587", "*)"}], 
+  "\[IndentingNewLine]", "$ContextPath"}]], "Input",
+ CellChangeTimes->{{3.6859451363205967`*^9, 3.685945144615177*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"\<\"SortAlgorithm`\"\>", ",", "\<\"MagicSquare`\"\>", 
-   ",", "\<\"CloudObjectLoader`\"\>", 
+  RowBox[{"\<\"RockPaperScissors`\"\>", ",", "\<\"SortAlgorithm`\"\>", 
+   ",", "\<\"MagicSquare`\"\>", ",", "\<\"CloudObjectLoader`\"\>", 
    ",", "\<\"SymbolicMachineLearningLoader`\"\>", 
    ",", "\<\"StreamingLoader`\"\>", ",", "\<\"NeuralNetworks`\"\>", 
    ",", "\<\"IconizeLoader`\"\>", ",", "\<\"HTTPHandlingLoader`\"\>", 
    ",", "\<\"PacletManager`\"\>", ",", "\<\"System`\"\>", 
    ",", "\<\"Global`\"\>"}], "}"}]], "Output",
  CellChangeTimes->{{3.685657936521076*^9, 3.685657950020793*^9}, 
-   3.685840010267851*^9, {3.6858401003012776`*^9, 3.6858401311894703`*^9}}]
+   3.685840010267851*^9, {3.6858401003012776`*^9, 3.6858401311894703`*^9}, {
+   3.6859451349956856`*^9, 3.6859451648220463`*^9}, {3.6859452838831353`*^9, 
+   3.6859452879521136`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
+  RowBox[{"(*", "\:5f00\:59cb\:4fdd\:5b58", "*)"}], "\[IndentingNewLine]", 
   RowBox[{"DumpSave", "[", 
    RowBox[{
     RowBox[{"FileNameJoin", "[", 
      RowBox[{"{", 
       RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<main.mx\>\""}], 
-      "}"}], "]"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"\"\<MagicSquare`\>\"", ",", "\"\<SortAlgorithm`\>\""}], "}"}]}],
-    "]"}], ";"}], "\n", 
- RowBox[{
-  RowBox[{"Quit", "[", "]"}], ";"}]}], "Input",
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       "\"\<SortAlgorithm.mx\>\""}], "}"}], "]"}], ",", 
+    RowBox[{"{", "\"\<SortAlgorithm`\>\"", "}"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.685657656189286*^9, 3.6856576793503284`*^9}, 
    3.685657743679457*^9, {3.6856578121645813`*^9, 3.685657841055133*^9}, {
    3.685657882500106*^9, 3.685657939937832*^9}, {3.685840105053113*^9, 
-   3.6858401141518073`*^9}}],
+   3.6858401141518073`*^9}, {3.6859450873040895`*^9, 
+   3.6859451207943697`*^9}, {3.6859451727845373`*^9, 3.6859451784078507`*^9}}],
 
 Cell[BoxData[
- TemplateBox[{
-  "List","cxt",
-   "\"\\!\\(\\*RowBox[{\\\"{\\\", \\\"\\\\\\\"`*\\\\\\\"\\\", \\\"}\\\"}]\\) \
-\:4e2d\:4f4d\:7f6e \\!\\(\\*RowBox[{\\\"1\\\"}]\\) \:5904\:6307\:5b9a\:4e86\
-\:4e00\:4e2a\:65e0\:6548\:7684\:4e0a\:4e0b\:6587. \:4e00\:4e2a\:4e0a\:4e0b\
-\:6587\:5fc5\:987b\:5305\:542b\:4ee5 \\!\\(\\*RowBox[{\\\"\\\\\\\"`\\\\\\\"\\\
-\"}]\\) \:5206\:9694\:548c\:7ed3\:675f\:7684\:6709\:6548\:7684\:5b57\:7b26\
-\:540d\:79f0.\"",2,47,2,31799977739641708666,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.685657694165705*^9}]
+ RowBox[{"{", "\<\"SortAlgorithm`\"\>", "}"}]], "Output",
+ CellChangeTimes->{3.685945178946041*^9}]
 }, Open  ]],
 
 Cell[BoxData[
- RowBox[{"Get", "[", 
-  RowBox[{"FileNameJoin", "[", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<main.mx\>\""}], "}"}],
-    "]"}], "]"}]], "Input"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"??", " ", "Magic"}]], "Input",
- CellChangeTimes->{{3.685657991480649*^9, 3.6856579970879555`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- StyleBox["\<\"Magic[n]\:53ef\:4ee5\:751f\:6210n\[Times]n\:7684\:5e7b\:65b9.\"\
-\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.685840135002145*^9},
- CellTags->"Info43685868934-3225796"],
-
-Cell[BoxData[
- InterpretationBox[GridBox[{
-    {
+ RowBox[{
+  RowBox[{"(*", "\:6d4b\:8bd5init\:7684\:8f7d\:5165", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Get", "[", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
      RowBox[{
-      RowBox[{"Attributes", "[", "Magic", "]"}], "=", 
-      RowBox[{"{", 
-       RowBox[{
-       "Listable", ",", "Locked", ",", "Protected", ",", "ReadProtected"}], 
-       "}"}]}]}
-   },
-   BaselinePosition->{Baseline, {1, 1}},
-   GridBoxAlignment->{
-    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-     "RowsIndexed" -> {}}],
-  Definition[MagicSquare`Magic],
-  Editable->False]], "Print",
- CellChangeTimes->{3.6858401350106535`*^9},
- CellTags->"Info43685868934-3225796"]
-}, Open  ]]
-}, Open  ]],
-
-Cell[BoxData["BinaryWrite"], "Input",
- CellChangeTimes->{{3.685666358370247*^9, 3.6856663583918457`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"??", " ", "InsertionSort"}]], "Input",
- CellChangeTimes->{{3.685840083877042*^9, 3.6858400850842695`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- StyleBox["\<\"InsertionSort[n]\:663e\:793a\:5bf9n\:4e2a\:8f93\:5165\:6392\
-\:5e8f\:65f6\:7684\:63d2\:5165\:6392\:5e8f\:6392\:5e8f\:7f51\:7edc\"\>", 
-  "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.6858401364155197`*^9},
- CellTags->"Info53685868936-3225796"],
-
-Cell[BoxData[
- InterpretationBox[GridBox[{
-    {
-     RowBox[{
-      RowBox[{"Attributes", "[", "InsertionSort", "]"}], "=", 
-      RowBox[{"{", 
-       RowBox[{"Locked", ",", "Protected", ",", "ReadProtected"}], "}"}]}]}
-   },
-   BaselinePosition->{Baseline, {1, 1}},
-   GridBoxAlignment->{
-    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
-     "RowsIndexed" -> {}}],
-  Definition[SortAlgorithm`InsertionSort],
-  Editable->False]], "Print",
- CellChangeTimes->{3.685840136420537*^9},
- CellTags->"Info53685868936-3225796"]
-}, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"InsertionSort", "@", 
-  RowBox[{"RandomSample", "@", 
-   RowBox[{"Range", "@", "10"}]}]}]], "Input",
- CellChangeTimes->{{3.6858401400701184`*^9, 3.6858401557076054`*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "10", ",", "2", ",", "7", ",", "5", ",", "6", ",", "8", ",", 
-     "3", ",", "4", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "10", ",", "2", ",", "7", ",", "5", ",", "6", ",", "8", ",", 
-     "3", ",", "4", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "10", ",", "7", ",", "5", ",", "6", ",", "8", ",", 
-     "3", ",", "4", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "7", ",", "10", ",", "5", ",", "6", ",", "8", ",", 
-     "3", ",", "4", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "5", ",", "7", ",", "10", ",", "6", ",", "8", ",", 
-     "3", ",", "4", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "5", ",", "6", ",", "7", ",", "10", ",", "8", ",", 
-     "3", ",", "4", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "5", ",", "6", ",", "7", ",", "8", ",", "10", ",", 
-     "3", ",", "4", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "3", ",", "5", ",", "6", ",", "7", ",", "8", ",", 
-     "10", ",", "4", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8",
-      ",", "10", ",", "9"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8",
-      ",", "9", ",", "10"}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{{3.685840142982608*^9, 3.685840159794665*^9}}]
-}, Open  ]]
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<init.m\>\""}], "}"}],
+     "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.685945077202199*^9, 3.6859450861412554`*^9}, {
+  3.685945122334605*^9, 3.6859451227759924`*^9}, {3.68594515671857*^9, 
+  3.6859451576427135`*^9}}]
 },
 WindowSize->{775, 872},
-WindowMargins->{{Automatic, 262}, {-62, Automatic}},
+WindowMargins->{{Automatic, 19}, {-79, Automatic}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (2016\:5e748\:670817\
 \:65e5)",
 StyleDefinitions->"Default.nb"
@@ -215,59 +98,23 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{
- "Info43685868934-3225796"->{
-  Cell[2945, 89, 210, 4, 43, "Print",
-   CellTags->"Info43685868934-3225796"],
-  Cell[3158, 95, 565, 17, 22, "Print",
-   CellTags->"Info43685868934-3225796"]},
- "Info53685868936-3225796"->{
-  Cell[4035, 127, 279, 5, 43, "Print",
-   CellTags->"Info53685868936-3225796"],
-  Cell[4317, 134, 548, 15, 22, "Print",
-   CellTags->"Info53685868936-3225796"]}
- }
+CellTagsIndex->{}
 *)
 (*CellTagsIndex
-CellTagsIndex->{
- {"Info43685868934-3225796", 7079, 218},
- {"Info53685868936-3225796", 7269, 223}
- }
+CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 309, 7, 66, "Input"],
 Cell[CellGroupData[{
-Cell[580, 22, 133, 2, 47, "Input"],
-Cell[716, 26, 572, 10, 69, "Output"]
+Cell[892, 31, 203, 4, 66, "Input"],
+Cell[1098, 37, 715, 12, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1325, 41, 657, 17, 84, "Input"],
-Cell[1985, 60, 569, 10, 24, "Message"]
+Cell[1850, 54, 737, 15, 66, "Input"],
+Cell[2590, 71, 113, 2, 30, "Output"]
 }, Open  ]],
-Cell[2569, 73, 204, 6, 47, "Input"],
-Cell[CellGroupData[{
-Cell[2798, 83, 122, 2, 30, "Input"],
-Cell[CellGroupData[{
-Cell[2945, 89, 210, 4, 43, "Print",
- CellTags->"Info43685868934-3225796"],
-Cell[3158, 95, 565, 17, 22, "Print",
- CellTags->"Info43685868934-3225796"]
-}, Open  ]]
-}, Open  ]],
-Cell[3750, 116, 105, 1, 47, "Input"],
-Cell[CellGroupData[{
-Cell[3880, 121, 130, 2, 30, "Input"],
-Cell[CellGroupData[{
-Cell[4035, 127, 279, 5, 43, "Print",
- CellTags->"Info53685868936-3225796"],
-Cell[4317, 134, 548, 15, 22, "Print",
- CellTags->"Info53685868936-3225796"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[4914, 155, 194, 4, 47, "Input"],
-Cell[5111, 161, 1629, 43, 144, "Output"]
-}, Open  ]]
+Cell[2718, 76, 479, 12, 66, "Input"]
 }
 ]
 *)

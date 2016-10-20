@@ -1,0 +1,658 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     23181,        648]
+NotebookOptionsPosition[     19821,        543]
+NotebookOutlinePosition[     21828,        596]
+CellTagsIndexPosition[     21785,        593]
+WindowTitle->\:5173\:4E8E\:4E5D\:5BAB\:683C\:5BC6\:7801\:76D8\:7684\:7814\
+\:7A76 - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "TutorialColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["PRETEND BILITY GENERATOR PACKAGE TUTORIAL", "PacletNameCell"], Cell[
+    TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->
+        False], {"\<\"PretendBilityGenerator/tutorial/\:5bc6\:7801\:76d8\:7684\
+\:7814\:7a76\"\>":>None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+            "PretendBilityGenerator/tutorial/\:5bc6\:7801\:76d8\:7684\:7814\
+\:7a76"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/\
+PretendBilityGenerator/tutorial/\:5bc6\:7801\:76d8\:7684\:7814\:7a76.html"], 
+               StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+           Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "PretendBilityGenerator/tutorial/\:5bc6\:7801\:76d8\:7684\:7814\
+\:7a76", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["\:5173\:4e8e\:4e5d\:5bab\:683c\:5bc6\:7801\:76d8\:7684\:7814\:7a76", \
+"Title",
+ CellLabel->"The page title",
+ CellID->509267359],
+
+Cell[TextData[{
+ "The functions defined in the ",
+ Cell[BoxData["NumericalAnalysis`"], "InlineFormula"],
+ " context provide support for finding numerical solutions to \
+calculus-related problems."
+}], "Text",
+ CellLabel->
+  "A paragraph describing overall functionality of the package, goals, etc.",
+ CellID->1534169418],
+
+Cell["This loads the package:", "MathCaption",
+ CellID->1825449234],
+
+Cell[BoxData[
+ RowBox[{"<<", "NumericalAnalysis`"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1373894796],
+
+Cell[CellGroupData[{
+
+Cell["Numerical Calculation of Series Expansions", "Section",
+ CellID->32197],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"allPermutations", "=", 
+   RowBox[{"Permutations", "[", 
+    RowBox[{
+     RowBox[{"Range", "[", 
+      RowBox[{"1", ",", "9"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "9"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"invalidSegments", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"4", ",", "6"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"8", ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "7"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"7", ",", "3"}], "}"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"invalidPattern", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Alternatives", "@@", 
+      RowBox[{"Apply", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"PatternSequence", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Except", "[", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"#1", "+", "#2"}], ")"}], "/", "2"}], "]"}], "..."}], 
+           ",", "#1", ",", "#2"}], "]"}], "&"}], ",", "invalidSegments", ",", 
+        RowBox[{"{", "1", "}"}]}], "]"}]}], ",", "___"}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"validPermutations", "=", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"allPermutations", ",", "invalidPattern"}], "]"}]}], ";"}], "\n", 
+ RowBox[{"Length", "[", "allPermutations", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "validPermutations", "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Length", "[", 
+    RowBox[{"Select", "[", 
+     RowBox[{"validPermutations", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "#1", "]"}], "\[Equal]", "i"}], "&"}]}], "]"}],
+     "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "2", ",", "9"}], "}"}]}], "]"}]}], "Input",
+ CellLabel->"In[23]:=",
+ CellID->403792699],
+
+Cell[BoxData["986400"], "Output",
+ ImageSize->{48, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[27]=",
+ CellID->170647314],
+
+Cell[BoxData["389488"], "Output",
+ ImageSize->{48, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[28]=",
+ CellID->47146577],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "56", ",", "320", ",", "1624", ",", "7152", ",", "26016", ",", "72912", ",",
+    "140704", ",", "140704"}], "}"}]], "Output",
+ ImageSize->{348, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[29]=",
+ CellID->45013636]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[UndirectedEdge]", "2"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "4"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "3"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "4"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "7"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "4"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "7"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "7"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"6", "\[UndirectedEdge]", "7"}], ",", 
+     RowBox[{"6", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"6", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"7", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"8", "\[UndirectedEdge]", "9"}]}], "}"}], ",", 
+   RowBox[{"VertexLabels", "\[Rule]", "\"\<Name\>\""}]}], "]"}]], "Input",
+ CellLabel->"In[30]:=",
+ CellID->168245295],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Graph", "::", "supp"}], "MessageName"], ":", 
+  " ", "\<\"\:4e0d\:652f\:6301\:6df7\:5408\:56fe\:548c\:591a\:56fe. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Graph\\\", ButtonNote -> \
+\\\"Graph::supp\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellLabel->"\:6b63\:5728\:8ba1\:7b97In[30]:=",
+ CellID->57387064],
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[UndirectedEdge]", "2"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "4"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"1", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "3"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "4"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "7"}], ",", 
+     RowBox[{"2", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "4"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"3", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "5"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "7"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"4", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "6"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "7"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"5", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"6", "\[UndirectedEdge]", "7"}], ",", 
+     RowBox[{"6", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"6", "\[UndirectedEdge]", "9"}], ",", 
+     RowBox[{"7", "\[UndirectedEdge]", "8"}], ",", 
+     RowBox[{"8", "\[UndirectedEdge]", "9"}]}], "}"}], ",", 
+   RowBox[{"VertexLabels", "\[Rule]", "\<\"Name\"\>"}]}], "]"}]], "Output",
+ ImageSize->{523, 50},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[30]=",
+ CellID->312471097]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"2", "\[Times]", "2", "\:5bc6\:7801\:76d8"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"ArrayPlot", "[", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "1", ",", "1"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0", ",", "1", ",", "1"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "0", ",", "1"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1", ",", "0"}], "}"}]}], "}"}], 
+   "]"}]}]], "Input",
+ CellLabel->"In[31]:=",
+ CellID->173550005],
+
+Cell[BoxData[
+ GraphicsBox[
+  RasterBox[{{0, 0, 0, 1}, {0, 0, 1, 0}, {0, 1, 0, 0}, {1, 0, 0, 0}}, {{0, 
+   0}, {4, 4}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  ImageSize->{103., Automatic}]], "Output",
+ ImageSize->{107, 103},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[31]=",
+ CellID->121760013]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"3", "\[Times]", "3", "\:5bc6\:7801\:76d8"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"ArrayPlot", "[", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+       "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+       "1", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "1", ",", 
+       "1", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+       "1", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+       "0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "0"}], "}"}]}], "}"}], "]"}]}]], "Input",
+ CellLabel->"In[33]:=",
+ CellID->406128724],
+
+Cell[BoxData[
+ GraphicsBox[
+  RasterBox[{{1, 0, 1, 0, 0, 0, 1, 0, 1}, {0, 1, 0, 0, 0, 0, 0, 1, 0}, {1, 0, 
+   1, 0, 0, 0, 1, 0, 1}, {0, 0, 0, 1, 0, 1, 0, 0, 0}, {0, 0, 0, 0, 1, 0, 0, 0,
+    0}, {0, 0, 0, 1, 0, 1, 0, 0, 0}, {1, 0, 1, 0, 0, 0, 1, 0, 1}, {0, 1, 0, 0,
+    0, 0, 0, 1, 0}, {1, 0, 1, 0, 0, 0, 1, 0, 1}}, {{0, 0}, {9, 9}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}}]], "Output",
+ ImageSize->{184, 180},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[33]=",
+ CellID->681160594]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"4", "\[Times]", "4", "\:5bc6\:7801\:76d8"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"ArrayPlot", "[", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+       "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", 
+       "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+       "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+       "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", "1", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", 
+       "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", 
+       "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", 
+       "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+       "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", 
+       "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+       "0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+       "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "1", ",", "0"}], "}"}]}], "}"}], "]"}]}]], "Input",
+ CellLabel->"In[32]:=",
+ CellID->537702533],
+
+Cell[BoxData[
+ GraphicsBox[
+  RasterBox[{{1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1}, {0, 0, 1, 0, 1,
+    0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0}, {0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 
+   1, 0, 1}, {1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1}, {0, 1, 0, 1, 0,
+    0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0}, {1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 
+   0, 0, 0}, {0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0}, {1, 0, 1, 0, 0,
+    0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0}, {0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 
+   1, 0, 1}, {0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0}, {0, 0, 0, 0, 0,
+    1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1}, {0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 
+   0, 1, 0}, {1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1}, {1, 0, 1, 0, 0,
+    0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0}, {0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 
+   1, 0, 0}, {1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1}}, {{0, 0}, {16, 
+   16}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}},
+  ImageSize->{311., Automatic}]], "Output",
+ ImageSize->{315, 311},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[32]=",
+ CellID->957361520]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"\:5173\:4e8e\:4e5d\:5bab\:683c\:5bc6\:7801\:76d8\:7684\:7814\
+\:7a76 - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2016, 10, 20, 18, 31, 10.5878475}", "context" -> 
+    "PretendBilityGenerator`", "keywords" -> {}, "index" -> True, "label" -> 
+    "Pretend Bility Generator Package Tutorial", "language" -> "zh", "paclet" -> 
+    "PretendBilityGenerator Package", "status" -> "None", "summary" -> 
+    "The functions defined in the NumericalAnalysis` context provide support \
+for finding numerical solutions to calculus-related problems. This loads the \
+package:", "synonyms" -> {}, "title" -> 
+    "\:5173\:4e8e\:4e5d\:5bab\:683c\:5bc6\:7801\:76d8\:7684\:7814\:7a76", 
+    "type" -> "Tutorial", "uri" -> 
+    "PretendBilityGenerator/tutorial/\:5bc6\:7801\:76d8\:7684\:7814\:7a76"}, 
+  "LinkTrails" -> "", "SearchTextTranslated" -> ""},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (2013\:5e742\:670813\
+\:65e5)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference-ja.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> 
+  "9.0 for Microsoft Windows (64-bit) (2013\:5e742\:670813\:65e5)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[661, 22, 78, 1, 70, "TutorialColorBar"],
+Cell[742, 25, 209, 6, 70, "LinkTrail"],
+Cell[954, 33, 2100, 47, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[3079, 84, 135, 3, 70, "Title",
+ CellID->509267359],
+Cell[3217, 89, 320, 8, 70, "Text",
+ CellID->1534169418],
+Cell[3540, 99, 67, 1, 70, "MathCaption",
+ CellID->1825449234],
+Cell[3610, 102, 106, 3, 70, "Input",
+ CellID->1373894796],
+Cell[CellGroupData[{
+Cell[3741, 109, 77, 1, 70, "Section",
+ CellID->32197],
+Cell[CellGroupData[{
+Cell[3843, 114, 2617, 81, 70, "Input",
+ CellID->403792699],
+Cell[6463, 197, 164, 5, 36, "Output",
+ CellID->170647314],
+Cell[6630, 204, 163, 5, 36, "Output",
+ CellID->47146577],
+Cell[6796, 211, 298, 9, 36, "Output",
+ CellID->45013636]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7131, 225, 1714, 36, 70, "Input",
+ CellID->168245295],
+Cell[8848, 263, 428, 9, 70, "Message",
+ CellID->57387064],
+Cell[9279, 274, 1803, 39, 71, "Output",
+ CellID->312471097]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11119, 318, 703, 21, 70, "Input",
+ CellID->173550005],
+Cell[11825, 341, 397, 12, 124, "Output",
+ CellID->121760013]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12259, 358, 1796, 45, 70, "Input",
+ CellID->406128724],
+Cell[14058, 405, 578, 13, 201, "Output",
+ CellID->681160594]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14673, 423, 3896, 89, 70, "Input",
+ CellID->537702533],
+Cell[18572, 514, 1183, 22, 332, "Output",
+ CellID->957361520]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[19794, 541, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

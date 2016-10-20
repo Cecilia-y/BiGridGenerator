@@ -1,0 +1,3085 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     81540,       3075]
+NotebookOptionsPosition[     65272,       2469]
+NotebookOutlinePosition[     67008,       2519]
+CellTagsIndexPosition[     66922,       2514]
+WindowTitle->ND - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["BIGRIDGENERATOR PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"\:6559\:7a0b \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"Numerical Analysis Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:NumericalAnalysis/tutorial/NumericalAnalysis"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"\:53c2\:89c1 \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"NLimit\"\>":>Documentation`HelpLookup[
+       "paclet:NumericalAnalysis/ref/NLimit"], "\<\"NSeries\"\>":>
+       Documentation`HelpLookup[
+       "paclet:NumericalAnalysis/ref/NSeries"], "\<\"D\"\>":>
+       Documentation`HelpLookup["paclet:ref/D"], "\<\"NResidue\"\>":>
+       Documentation`HelpLookup["paclet:NumericalAnalysis/ref/NResidue"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"\:66f4\:591a\:5173\:4e8e \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"BiGridGenerator\"\>":>
+       Documentation`HelpLookup[
+       "paclet:BiGridGenerator/guide/BiGridGenerator"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"BiGridGenerator/ref/ND\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["BiGridGenerator/ref/ND"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/BiGridGenerator/ref/\
+ND.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+            Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "BiGridGenerator/ref/ND", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["ND", "ObjectName",
+ CellLabel->"The symbol whose usage is described on this page",
+ CellID->14331],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"ND", "[", 
+       RowBox[{
+        StyleBox["expr", "TI"], ",", 
+        StyleBox["x", "TI"], ",", 
+        SubscriptBox[
+         StyleBox["x", "TI"], 
+         StyleBox["0", "TR"]]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives a numerical approximation to the derivative of ",
+     Cell[BoxData[
+      StyleBox["expr", "TI"]], "InlineFormula"],
+     " with respect to ",
+     Cell[BoxData[
+      StyleBox["x", "TI"]], "InlineFormula"],
+     " at the point ",
+     Cell[BoxData[
+      SubscriptBox[
+       StyleBox["x", "TI"], 
+       StyleBox["0", "TR"]]], "InlineFormula"],
+     "."
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"ND", "[", 
+       RowBox[{
+        StyleBox["expr", "TI"], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["x", "TI"], ",", 
+          StyleBox["n", "TI"]}], "}"}], ",", 
+        SubscriptBox[
+         StyleBox["x", "TI"], 
+         StyleBox["0", "TR"]]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]gives a numerical approximation to the ",
+     Cell[BoxData[
+      FormBox[
+       StyleBox["n", "TI"], TraditionalForm]], "InlineFormula"],
+     Cell[BoxData[
+      FormBox[
+       SuperscriptBox["\[Null]", "th"], TraditionalForm]]],
+     " derivative of ",
+     Cell[BoxData[
+      StyleBox["expr", "TI"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}}},
+ CellLabel->
+  "A \"Usage\" cell gives possible argument patterns for the primary function \
+being discussed on the page along with the functionality that each pattern\n\
+provides. Each usage \"paragraph\" should start with an argument pattern. The \
+beginning of each such template should begin with the function name.\nPut the \
+cursor at the end of an explanation for a usage pattern and click the Double \
+Usage Line button to start a new usage paragraph. An option\nsymbol is \
+acceptable as a usage pattern.",
+ CellID->7970],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox["\:66f4\:591a\:4fe1\:606f", "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->14320580],
+
+Cell[TextData[{
+ "The expression ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " must be numeric when its argument ",
+ Cell[BoxData[
+  StyleBox["x", "TI"]], "InlineFormula"],
+ " is numeric."
+}], "Notes",
+ ShowAutoStyles->False,
+ ParagraphSpacing->{0.7, 0},
+ ScriptMinSize->9,
+ CellLabel->
+  "Text such as this gives additional information about the function",
+ CellID->26053],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{"ND", "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    StyleBox["x", "TI"], ",", 
+    SubscriptBox[
+     StyleBox["x", "TI"], 
+     StyleBox["0", "TR"]]}], "]"}]], "InlineFormula"],
+ " is equivalent to ",
+ Cell[BoxData[
+  RowBox[{"ND", "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["x", "TI"], ",", 
+      StyleBox["1", "TR"]}], "}"}], ",", 
+    SubscriptBox[
+     StyleBox["x", "TI"], 
+     StyleBox["0", "TR"]]}], "]"}]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->8768],
+
+Cell[TextData[{
+ Cell[BoxData["ND"], "InlineFormula"],
+ " is unable to recognize small numbers that should in fact be zero. ",
+ Cell[BoxData[
+  ButtonBox["Chop",
+   BaseStyle->"FunctionLink",
+   ButtonData->"paclet:ref/Chop"]], "InlineFormula"],
+ " may be needed to eliminate these spurious residuals."
+}], "Notes",
+ CellID->28052],
+
+Cell["The following options can be given: ", "Notes",
+ CellLabel->
+  "Options tables, which describe valid options, their default values, and \
+what they control, are often given in this section",
+ CellID->13178],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], 
+    ButtonBox["Method",
+     BaseStyle->"FunctionLink",
+     ButtonData->"paclet:ref/Method"], "EulerSum", Cell[
+    "method to use", "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    ButtonBox["Scale",
+     BaseStyle->"Link",
+     ButtonData->"paclet:NumericalAnalysis/ref/Scale"], "1", Cell[
+    "size at which variations are expected", "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    ButtonBox["Terms",
+     BaseStyle->"Link",
+     ButtonData->"paclet:NumericalAnalysis/ref/Terms"], "7", Cell[
+    "number of terms to be used", "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    ButtonBox["WorkingPrecision",
+     BaseStyle->"FunctionLink",
+     ButtonData->"paclet:ref/WorkingPrecision"], 
+    ButtonBox["MachinePrecision",
+     BaseStyle->"FunctionLink",
+     ButtonData->"paclet:ref/MachinePrecision"], Cell[
+    "precision to use in internal computations", "TableText"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, 
+   "Rows" -> {None, None, None, {None}}, "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True, True, True}}}},
+ CellID->11156],
+
+Cell[TextData[{
+ "Possible settings for ",
+ Cell[BoxData[
+  ButtonBox["Method",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Method"]], "InlineFormula"],
+ " include:"
+}], "Notes",
+ CellID->24981],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], "EulerSum", Cell[
+    "use Richardson's extrapolation to the limit", "TableText"]},
+   {Cell["      ", "TableRowIcon"], 
+    ButtonBox["NIntegrate",
+     BaseStyle->"Link",
+     ButtonData->"paclet:ref/NIntegrate"], Cell[
+    "use Cauchy's integral formula", "TableText"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True}}}},
+ CellID->12695],
+
+Cell[TextData[{
+ "With ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", "EulerSum"}]], "InlineFormula"],
+ ", ",
+ Cell[BoxData["ND"], "InlineFormula"],
+ " needs to evaluate ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " at ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["x", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->17586],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " is not analytic in the neighborhood of ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["x", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ ", then the default method ",
+ Cell[BoxData["EulerSum"], "InlineFormula"],
+ " must be used."
+}], "Notes",
+ CellID->13929],
+
+Cell[TextData[{
+ "The option ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Scale",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/Scale"], "->", 
+   StyleBox["s", "TI"]}]], "InlineFormula"],
+ " is used to capture the scale of variation when using ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", "EulerSum"}]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->731],
+
+Cell[TextData[{
+ "When the value of the derivative depends on the direction, the default is \
+to the right. Other directions can be chosen with the option ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Scale",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/Scale"], "->", 
+   StyleBox["s", "TI"]}]], "InlineFormula"],
+ ", where the direction is ",
+ Cell[BoxData[
+  StyleBox["s", "TI"]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->4278],
+
+Cell[TextData[{
+ "The option ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Terms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/Terms"], "->", 
+   StyleBox["n", "TI"]}]], "InlineFormula"],
+ " gives the number of terms to use for extrapolation when using ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", "EulerSum"}]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->17859],
+
+Cell[TextData[{
+ "With ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", 
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"]}]], "InlineFormula"],
+ ", the expression ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " must be analytic in a neighborhood of the point ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["x", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->8752],
+
+Cell[TextData[{
+ "The option ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Scale",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/Scale"], "->", 
+   StyleBox["r", "TI"]}]], "InlineFormula"],
+ " specifies the radius of the contour of integration to use with ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", 
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"]}]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->5089]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["\:8303\:4f8b",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->447776111],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\:4f8b",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->1014783385],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->553284329],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", "x", ",", "1"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->19511],
+
+Cell[BoxData["2.718281828499301`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->32174]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"Cos", "[", "x", "]"}], "3"], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "2"}], "}"}], ",", "0"}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->28819],
+
+Cell[BoxData[
+ RowBox[{"-", "3.000002612074262`"}]], "Output",
+ ImageSize->{26, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->26107]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Scope",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ ShowCellLabel->True,
+ CellID->22599],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->131317981],
+
+Cell["The expression and evaluation point may be complex:", "ExampleText",
+ CellID->788],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "x", "]"}], ",", "x", ",", 
+   RowBox[{"\[Pi]", " ", "I"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->13261],
+
+Cell[BoxData[
+ RowBox[{"11.591953275551333`", "\[InvisibleSpace]", "+", 
+  RowBox[{"1.323365937623129`*^-10", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{156, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->29045]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Cos", "[", 
+    RowBox[{"I", " ", "x"}], "]"}], ",", "x", ",", 
+   RowBox[{"1", "+", "I"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->24435],
+
+Cell[BoxData[
+ RowBox[{"0.6349639147965727`", "\[InvisibleSpace]", "+", 
+  RowBox[{"1.2984575814314623`", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{129, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->7492]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Generalizations & Extensions",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ ShowCellLabel->True,
+ CellID->5732],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->191528983],
+
+Cell[TextData[{
+ Cell[BoxData["ND"], "InlineFormula"],
+ " is threaded element-wise:"
+}], "ExampleText",
+ CellID->30076],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Exp", "[", "x", "]"}], ",", 
+     RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", "x", ",", "1"}], 
+  "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->4667],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2.718281828499301`", ",", "0.5403023058792048`"}], "}"}]], "Output",
+ ImageSize->{134, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->403]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Options",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(7)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ ShowCellLabel->True,
+ CellID->18367],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Method",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(2)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->18899],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->390580160],
+
+Cell[TextData[{
+ "Use the default ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"FunctionLink",
+    ButtonData->"paclet:ref/Method"], "->", "EulerSum"}]], "InlineFormula"],
+ " when ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " is not analytic in the neighborhood of ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["x", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->21054],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Re", "[", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"I", " ", "y"}], "]"}], "]"}], ",", "y", ",", "1"}], 
+  "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->10167],
+
+Cell[BoxData["1.1752011936656868`"], "Output",
+ ImageSize->{46, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->19212]
+}, Open  ]],
+
+Cell["Check:", "ExampleText",
+ CellID->26114],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"ComplexExpand", "[", 
+      RowBox[{"Re", "[", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"I", " ", "y"}], "]"}], "]"}], "]"}], ",", "y"}], "]"}], "/.", 
+   RowBox[{"y", "->", "1"}]}], "//", "N"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->30129],
+
+Cell[BoxData["1.1752011936438014`"], "Output",
+ ImageSize->{46, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->5793]
+}, Open  ]],
+
+Cell[TextData[{
+ "An incorrect answer is obtained with ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", 
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"]}]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->11977],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Re", "[", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"I", " ", "y"}], "]"}], "]"}], ",", "y", ",", "1", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->29854],
+
+Cell[BoxData[
+ RowBox[{"0.5876005968219005`", "\[InvisibleSpace]", "+", 
+  RowBox[{"2.7755575615628914`*^-17", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{170, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->15012]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->6831],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->270734359],
+
+Cell["Here is a derivative where the default method works poorly:", \
+"ExampleText",
+ CellID->14889],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    SuperscriptBox["x", "2"], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "3"}], "}"}], ",", "1"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->23326],
+
+Cell[BoxData["68.50733029097267`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->32647]
+}, Open  ]],
+
+Cell["The correct answer is:", "ExampleText",
+ CellID->11299],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     SuperscriptBox["x", "2"], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "3"}], "}"}]}], "]"}], "/.", 
+  RowBox[{"x", "->", "1."}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->2489],
+
+Cell[BoxData["54.36563656918091`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->29674]
+}, Open  ]],
+
+Cell[TextData[{
+ "In this case the expression is analytic, so ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", 
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"]}]], "InlineFormula"],
+ " will work well:"
+}], "ExampleText",
+ CellID->25836],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    SuperscriptBox["x", "2"], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "3"}], "}"}], ",", "1", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->6612],
+
+Cell[BoxData[
+ RowBox[{"54.3656365691809`", "\[InvisibleSpace]", "+", 
+  RowBox[{"1.798561299892754`*^-14", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{163, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->24387]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Scale",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(3)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->11957],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->98964196],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Scale",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/Scale"], "->", 
+   StyleBox["s", "TI"]}]], "InlineFormula"],
+ " to capture the region of variation:"
+}], "ExampleText",
+ CellID->15503],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"100", "x"}], "]"}], ",", "x", ",", "0"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->19491],
+
+Cell[BoxData["215.87924646390655`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->10482]
+}, Open  ]],
+
+Cell[TextData[{
+ "The scale of variation is around ",
+ Cell[BoxData[".01"], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->2829],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"100", "x"}], "]"}], ",", "x", ",", "0", ",", 
+   RowBox[{"Scale", "->", ".01"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->27027],
+
+Cell[BoxData["100.00000000025713`"], "Output",
+ ImageSize->{32, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->13361]
+}, Open  ]],
+
+Cell[TextData[{
+ "A value of ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Scale",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/Scale"], "->", 
+   StyleBox["s", "TI"]}]], "InlineFormula"],
+ " which is too large can be compensated by increasing the number of terms:"
+}], "ExampleText",
+ CellID->952],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"100", "x"}], "]"}], ",", "x", ",", "0", ",", 
+   RowBox[{"Terms", "->", "11"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->8496],
+
+Cell[BoxData["100.00003898691293`"], "Output",
+ ImageSize->{32, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->5646]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->15183],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->423400582],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  ButtonBox["Scale",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/Scale"]], "InlineFormula"],
+ " to specify directional derivatives. The left and right derivatives of the \
+nonanalytic function ",
+ Cell[BoxData[
+  StyleBox[
+   RowBox[{"\[LeftBracketingBar]", "x", "\[RightBracketingBar]"}], "TI"]], 
+  "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->15597],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Abs", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1"}], "}"}], ",", "0"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->11554],
+
+Cell[BoxData["1.`"], "Output",
+ ImageSize->{18, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->25032]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Abs", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1"}], "}"}], ",", "0", ",", 
+   RowBox[{"Scale", "->", 
+    RowBox[{"-", "1"}]}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->18102],
+
+Cell[BoxData[
+ RowBox[{"-", "1.`"}]], "Output",
+ ImageSize->{26, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->5945]
+}, Open  ]],
+
+Cell["Check:", "ExampleText",
+ CellID->20476],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Abs", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->28224],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, {LineBox[CompressedData["
+1:eJwtx1tIkwEYh/GVVkSRCmYWk6xG2BJxFhsE7a3YTYGRNYmuRLcvSStpiS2K
+0WHRgk5IiYMWFQgdPCSGy7DvXaIV4lCZOHO0pnNrh+aXWJZB2oL/xcOPZ1NF
+zWFhqUwmK0r2XyVlxRYXJYaUVXd7KJ58SCkty53e5EPybPh1tS35kM7OeXPK
+kg+pu8VeIi5IDOmgPKfr4l+JIZnmt9jm/0gM6WWHauvsT4khafKKK8JxiSHt
+yrCOD3glhrQ3ONNvb5MY0qHr7hc7yiSGVDdoPVUpTjOksZFVsXflCYaU66rJ
+1Mi/MaTX1b3L0j7HGJLxpur7pytRhvS7/oKNKcKQHq/xr2+cCDMk+wGVyXMj
+xJAunyw3b9s/xZAsKc/PmRKTDMlwaVAx+nSCITW8DTU+qAowpO4veaubN/sZ
+kjx9zz79Qx9DciptVZPBMYbk72vPVatHGVI4/34Rd3oYUrblmbpgyTBDKlRL
++U2zAwzpmi4x1GX+wJDW6lvvHlvXw5Dcc31pHxVvGNITX+hW1NrKkI6WyF/5
+DPcYkqNaf8ZvsDKkjEe98aChliGlr2wKTBuMDCkwLvSnGvUMyWX56ig06hiS
+8D6msxl3MiRH6Uy9RlAwJGXtQkHD8UyGtLs9u/LIiVSGVLq92Os+/UOEWuvG
+TmfP+SkRaiMrbObmOyMi1OqEyLArKohQ+w/c4b0r
+     "]], LineBox[CompressedData["
+1:eJxTTMoPSmViYGBQA2IQ7ZL64uKBl6l2MJrDWargvqSLPYx2mT9jzmbJEDjt
+dvb6prmSKXA6KOX73kmSJXD6nn67c69kC5xeJerf1iU5BU43cmxW75RcAqcj
+Ixeu//BxC5z+968xxl1uP5xWDHz34nD3ETidd87SfsaXk3BafovgPUbG83B6
+3yPnM+dtLsHpPVlzpSPfXIHT/9Rs+dfmXofTzD9XC0ir3oLT1v8TtgWvuwOn
+r7SYnDumdR9OK014/XPluwdw+uX3+/euGjyC00te7T7F1/cYTgvKLn//5MkT
+ON2buTVtgcozOP3FYfWTjPrncLrE6MgWscMv4PT9dUe6Lyq+gtO/s67M1qx6
+Daf1Hdn/pe1+A6fdFimmbxR/B6dLZeOVHsa8h9Mh66zaCtYh6P1lGhYW1xH0
+lyh5wTmvETT/2Vl/z35F0IptNz4/+4WglyZ9zyv+i6C17MVe/f+PoAFi5T/N
+
+     "]]}},
+  AspectRatio->GoldenRatio^(-1),
+  Axes->True,
+  ImageMargins->0.,
+  ImageSize->{225, Automatic},
+  Method->{},
+  PlotRange->{{-1, 1}, Automatic},
+  PlotRangeClipping->True]], "Output",
+ ImageSize->{229, 145},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->9081]
+}, Open  ]],
+
+Cell["Complex directions may also be specified:", "ExampleText",
+ CellID->22195],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Abs", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1"}], "}"}], ",", "0", ",", 
+   RowBox[{"Scale", "->", 
+    RowBox[{"1", "+", "I"}]}]}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->31623],
+
+Cell[BoxData[
+ RowBox[{"0.7071067811865475`", "\[InvisibleSpace]", "-", 
+  RowBox[{"0.7071067811865475`", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{136, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->27632]
+}, Open  ]],
+
+Cell["Check:", "ExampleText",
+ CellID->28343],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"Abs", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "+", "I"}], ")"}], "h"}], "]"}], "-", 
+      RowBox[{"Abs", "[", "0", "]"}]}], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", "I"}], ")"}], "h"}]], ",", 
+    RowBox[{"h", "->", "0"}]}], "]"}], "//", "N"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->22602],
+
+Cell[BoxData[
+ RowBox[{"0.7071067811865475`", "\[InvisibleSpace]", "-", 
+  RowBox[{"0.7071067811865475`", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{136, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->15369]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->3282],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->222227622],
+
+Cell[TextData[{
+ "Use the option ",
+ Cell[BoxData[
+  ButtonBox["Scale",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Scale"]], "InlineFormula"],
+ " to avoid regions of non-analyticity when the method used is ",
+ Cell[BoxData[
+  ButtonBox["NIntegrate",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/NIntegrate"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->19989],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    FractionBox["1", 
+     RowBox[{"1", "-", "x"}]], "]"}], ",", "x", ",", ".5", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->14437],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"ncvi\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"NIntegrate failed to converge to \
+prescribed accuracy after \\\\\\\"\\\", \
+\\\"MSG\\\"]\\)\\!\\(9\\)\\!\\(\\*StyleBox[\\\"\\\\\\\" iterated refinements \
+in \\\\\\\"\\\", \
+\\\"MSG\\\"]\\)\\!\\(NumericalMath`NLimit`Private`t$174\\)\\!\\(\\*StyleBox[\\\
+\"\\\\\\\" in the region \\\\\\\"\\\", \\\"MSG\\\"]\\)\\!\\({\\({0.`, \
+6.283185307179586`}\\)}\\)\\!\\(\\*StyleBox[\\\"\\\\\\\".\\\\\\\"\\\", \
+\\\"MSG\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet://Messages/NIntegrate/ncvi\\\"]\\)\"\>"}]], "Message", \
+"MSG",
+ CellLabel->"During evaluation of In[2]:=",
+ CellID->21599],
+
+Cell[BoxData[
+ RowBox[{"0``15.405544587387448", "+", 
+  RowBox[{"0``15.405544587387448", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{137, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->35]
+}, Open  ]],
+
+Cell[TextData[{
+ "Shrinking the radius avoids the essential singularity at ",
+ Cell[BoxData[
+  RowBox[{
+   StyleBox["x", "TI"], "\[Equal]", "1"}]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->3179],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    FractionBox["1", 
+     RowBox[{"1", "-", "x"}]], "]"}], ",", "x", ",", ".5", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}], ",", 
+   RowBox[{"Scale", "->", ".1"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->19654],
+
+Cell[BoxData[
+ RowBox[{"29.5562243957226`", "\[InvisibleSpace]", "-", 
+  RowBox[{"1.7763568394002505`*^-15", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{163, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->24652]
+}, Open  ]],
+
+Cell["Check:", "ExampleText",
+ CellID->23399],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     FractionBox["1", 
+      RowBox[{"1", "-", "x"}]], "]"}], ",", "x"}], "]"}], "/.", 
+  RowBox[{"x", "->", ".5"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->28350],
+
+Cell[BoxData["29.5562243957226`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->30132]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Terms",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->28945],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->541718349],
+
+Cell["\<\
+Increasing the number of terms may improve accuracy. Here is a somewhat \
+inaccurate approximation:\
+\>", "ExampleText",
+ CellID->5293],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    SuperscriptBox["x", "2"], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "3"}], "}"}], ",", "1"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->21871],
+
+Cell[BoxData[
+ RowBox[{"-", "14.415801450148729`"}]], "Output",
+ ImageSize->{61, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->2649]
+}, Open  ]],
+
+Cell["Check:", "ExampleText",
+ CellID->22590],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     SuperscriptBox["x", "2"], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "3"}], "}"}]}], "]"}], "/.", 
+  RowBox[{"x", "->", "1`30"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->29204],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  "14.42007026463987581903752071910740082533`29.71750058728235"}]], "Output",
+ ImageSize->{229, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->32177]
+}, Open  ]],
+
+Cell["\<\
+Increasing the number of terms produces a more accurate answer:\
+\>", "ExampleText",
+ CellID->25705],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ND", "[", 
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     SuperscriptBox["x", "2"], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "3"}], "}"}], ",", "1", ",", 
+    RowBox[{"Terms", "->", "10"}]}], "]"}], "//", "FullForm"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->5319],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"-", "14.420070284583973`"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ ImageSize->{145, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]//FullForm=",
+ CellID->4750]
+}, Open  ]],
+
+Cell["\<\
+Increasing the number of terms further can produce nonsense due to numerical \
+instability:\
+\>", "ExampleText",
+ CellID->897419669],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    SuperscriptBox["x", "2"], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "3"}], "}"}], ",", "1", ",", 
+   RowBox[{"Terms", "->", "20"}]}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->20228],
+
+Cell[BoxData["33.97412842860368`"], "Output",
+ ImageSize->{53, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->5722]
+}, Open  ]],
+
+Cell["\<\
+Combining an increase in the number of terms with a higher working precision \
+often will reduce the error:\
+\>", "ExampleText",
+ CellID->29668],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    SuperscriptBox["x", "2"], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "3"}], "}"}], ",", "1", ",", 
+   RowBox[{"Terms", "->", "20"}], ",", 
+   RowBox[{"WorkingPrecision", "->", "40"}]}], "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->8785],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  "14.42007026463987581903752071910748618358`22.483070848463477"}]], "Output",
+ ImageSize->{180, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->23774]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "WorkingPrecision",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->19184],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->389541661],
+
+Cell[TextData[{
+ "High-order derivatives with ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", "EulerSum"}]], "InlineFormula"],
+ " experience significant subtractive cancellation:"
+}], "ExampleText",
+ CellID->6651],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "10"}], "}"}], ",", "0"}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->18884],
+
+Cell[BoxData[
+ RowBox[{"-", "86411.29081217309`"}]], "Output",
+ ImageSize->{63, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->27037]
+}, Open  ]],
+
+Cell["\<\
+Using a higher working precision and additional terms produces an accurate \
+answer:\
+\>", "ExampleText",
+ CellID->10915],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "10"}], "}"}], ",", "0", ",", 
+   RowBox[{"WorkingPrecision", "->", "40"}], ",", 
+   RowBox[{"Terms", "->", "10"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->15189],
+
+Cell[BoxData["0.9999999999990373947`9.353757621007098"], "Output",
+ ImageSize->{74, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->11681]
+}, Open  ]],
+
+Cell[TextData[{
+ "For this problem, ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", 
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"]}]], "InlineFormula"],
+ " with default options produces a correct answer:"
+}], "ExampleText",
+ CellID->19074],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "10"}], "}"}], ",", "0", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->13759],
+
+Cell[BoxData[
+ RowBox[{"1.0000000007853282`", "\[InvisibleSpace]", "+", 
+  RowBox[{"1.3345324845204234`*^-9", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{123, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->5850]
+}, Open  ]],
+
+Cell["\<\
+Higher-order derivatives will again experience numerical instability:\
+\>", "ExampleText",
+ CellID->4546],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "20"}], "}"}], ",", "0", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}]}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->29260],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "::", "\<\"ncvi\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"NIntegrate failed to converge to \
+prescribed accuracy after \\\\\\\"\\\", \
+\\\"MSG\\\"]\\)\\!\\(9\\)\\!\\(\\*StyleBox[\\\"\\\\\\\" iterated refinements \
+in \\\\\\\"\\\", \
+\\\"MSG\\\"]\\)\\!\\(NumericalMath`NLimit`Private`t$288\\)\\!\\(\\*StyleBox[\\\
+\"\\\\\\\" in the region \\\\\\\"\\\", \\\"MSG\\\"]\\)\\!\\({\\({0.`, \
+6.283185307179586`}\\)}\\)\\!\\(\\*StyleBox[\\\"\\\\\\\".\\\\\\\"\\\", \
+\\\"MSG\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet://Messages/NIntegrate/ncvi\\\"]\\)\"\>"}]], "Message", \
+"MSG",
+ CellLabel->"During evaluation of In[5]:=",
+ CellID->6427],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "386.41500867166883`"}], "+", 
+  RowBox[{"51.024124401161124`", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{133, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->22233]
+}, Open  ]],
+
+Cell[TextData[{
+ "Increasing ",
+ Cell[BoxData[
+  ButtonBox["WorkingPrecision",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/WorkingPrecision"]], "InlineFormula"],
+ " will improve the accuracy:"
+}], "ExampleText",
+ CellID->9421],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "20"}], "}"}], ",", "0", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}], ",", 
+   RowBox[{"WorkingPrecision", "->", "30"}]}], "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->3161],
+
+Cell[BoxData[
+ RowBox[{"0.999999999999999997352548475328941139579119201496`30.\
+15051499783199", "+", 
+  RowBox[{
+  "1.40537810099299720256763078`8.298308179784005*^-22", " ", 
+   "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{369, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->27818]
+}, Open  ]],
+
+Cell["\<\
+An alternative is to increase the radius of the contour of integration:\
+\>", "ExampleText",
+ CellID->9546],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "20"}], "}"}], ",", "0", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}], ",", 
+   RowBox[{"Scale", "->", "5"}]}], "]"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->21350],
+
+Cell[BoxData[
+ RowBox[{"0.9999999996449286`", "\[InvisibleSpace]", "+", 
+  RowBox[{"3.17631121920142`*^-10", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{128, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]=",
+ CellID->21263]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Applications",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ ShowCellLabel->True,
+ CellID->16461],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->106482491],
+
+Cell[TextData[{
+ Cell[BoxData["ND"], "InlineFormula"],
+ " is useful for differentiating functions which are only defined \
+numerically. Here is such a function:"
+}], "ExampleText",
+ CellID->21846],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"a_", "?", "NumericQ"}], ",", 
+    RowBox[{"b_", "?", "NumericQ"}]}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], "=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "t", "}"}], ",", 
+     RowBox[{"y", "/.", 
+      RowBox[{
+       RowBox[{"NDSolve", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"y", "'"}], "[", "t", "]"}], "==", 
+            RowBox[{"a", "-", 
+             RowBox[{"b", " ", 
+              SuperscriptBox[
+               RowBox[{"y", "[", "t", "]"}], "3"]}]}]}], ",", 
+           RowBox[{
+            RowBox[{"y", "[", "0", "]"}], "==", "1"}]}], "}"}], ",", "y", ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}], 
+       "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}]}], 
+    "]"}]}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->23458],
+
+Cell[TextData[{
+ "Here is the derivative of ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+    StyleBox["f", "TI"], "[", 
+    RowBox[{
+     StyleBox["a", "TI"], ",", 
+     StyleBox["b", "TI"]}], "]"}], "[", 
+   StyleBox["t", "TI"], "]"}]], "InlineFormula"],
+ " with respect to ",
+ Cell[BoxData[
+  StyleBox["b", "TI"]], "InlineFormula"],
+ " evaluated at ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     StyleBox["a", "TI"], ",", 
+     StyleBox["b", "TI"], ",", 
+     StyleBox["t", "TI"]}], "}"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "1"}], "}"}]}]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->9594],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"1", ",", "b"}], "]"}], "[", "1", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"b", ",", "1"}], "}"}], ",", "2"}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->27371],
+
+Cell[BoxData[
+ RowBox[{"-", "0.13290422223299753`"}]], "Output",
+ ImageSize->{68, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->17945]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData["ND"], "InlineFormula"],
+ " can be used as an aid in developing and testing a more robust function for \
+finding the derivative:"
+}], "ExampleText",
+ CellID->13502],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"fb", "[", 
+   RowBox[{
+    RowBox[{"a_", "?", "NumericQ"}], ",", 
+    RowBox[{"b_", "?", "NumericQ"}]}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"fb", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], "=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "t", "}"}], ",", 
+     RowBox[{"yb", "/.", 
+      RowBox[{
+       RowBox[{"NDSolve", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"y", "'"}], "[", "t", "]"}], "==", 
+            RowBox[{"a", "-", 
+             RowBox[{"b", " ", 
+              SuperscriptBox[
+               RowBox[{"y", "[", "t", "]"}], "3"]}]}]}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"yb", "'"}], "[", "t", "]"}], "==", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox[
+               RowBox[{"y", "[", "t", "]"}], "3"]}], "-", 
+             RowBox[{"3", "b", " ", 
+              SuperscriptBox[
+               RowBox[{"y", "[", "t", "]"}], "2"], 
+              RowBox[{"yb", "[", "t", "]"}]}]}]}], ",", 
+           RowBox[{
+            RowBox[{"y", "[", "0", "]"}], "==", "1"}], ",", 
+           RowBox[{
+            RowBox[{"yb", "[", "0", "]"}], "==", "0"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", "yb"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", ",", "1"}], "}"}]}], "]"}], 
+       "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}]}], 
+    "]"}]}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->8246],
+
+Cell["Check:", "ExampleText",
+ CellID->20420],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"fb", "[", 
+   RowBox[{"1", ",", "2"}], "]"}], "[", "1", "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->25254],
+
+Cell[BoxData[
+ RowBox[{"-", "0.13290423230072387`"}]], "Output",
+ ImageSize->{68, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->7953]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Properties & Relations",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(3)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ ShowCellLabel->True,
+ CellID->15760],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->907180813],
+
+Cell[TextData[{
+ "The option ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", 
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"]}]], "InlineFormula"],
+ " uses Cauchy's integral formula to compute derivatives:"
+}], "ExampleText",
+ CellID->3586],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    SuperscriptBox["x", "2"], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "4"}], "}"}], ",", "0", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->25419],
+
+Cell[BoxData[
+ RowBox[{"11.999999999999993`", "\[InvisibleSpace]", "+", 
+  RowBox[{"7.072469981567318`*^-16", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{135, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->28735]
+}, Open  ]],
+
+Cell[TextData[{
+ "The equivalent computation can be performed using ",
+ Cell[BoxData[
+  ButtonBox["NResidue",
+   BaseStyle->"Link",
+   ButtonData->"paclet:NumericalAnalysis/ref/NResidue"]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->16616],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"4", "!"}], 
+  RowBox[{"NResidue", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"Exp", "[", 
+      SuperscriptBox["x", "2"], "]"}], 
+     SuperscriptBox["x", 
+      RowBox[{"4", "+", "1"}]]], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0"}], "}"}]}], "]"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->13335],
+
+Cell[BoxData[
+ RowBox[{"11.999999647960067`", "\[InvisibleSpace]", "-", 
+  RowBox[{"1.085432435414935`*^-7", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{130, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->28592]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->29018],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->373729283],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " has built-in code to compute derivatives of numerical functions:"
+}], "ExampleText",
+ CellID->9265],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"t_", "?", "NumericQ"}], "]"}], ":=", 
+  RowBox[{"0.001", "+", 
+   RowBox[{"0.002", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"50", "t"}], "]"}]}]}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->9370],
+
+Cell["\<\
+The built-in numerical derivative code can be used. However, it is unable to \
+capture the rapid oscillations:\
+\>", "ExampleText",
+ CellID->22336],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "'"}], "[", ".1", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->26525],
+
+Cell[BoxData["0.018292619556887216`"], "Output",
+ ImageSize->{67, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->12746]
+}, Open  ]],
+
+Cell["The correct answer:", "ExampleText",
+ CellID->17644],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{".001", "+", 
+     RowBox[{".002", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"50", "t"}], "]"}]}]}], ",", "t"}], "]"}], "/.", 
+  RowBox[{"t", "->", ".1"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->19512],
+
+Cell[BoxData["0.028366218546322625`"], "Output",
+ ImageSize->{67, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->29482]
+}, Open  ]],
+
+Cell[TextData[{
+ "Using ",
+ Cell[BoxData["ND"], "InlineFormula"],
+ " with the appropriate options can compute an accurate derivative:"
+}], "ExampleText",
+ CellID->2815],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "t", "]"}], ",", "t", ",", ".1", ",", 
+   RowBox[{"Scale", "->", ".1"}]}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->5105],
+
+Cell[BoxData["0.028366202321072575`"], "Output",
+ ImageSize->{67, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->25726]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "t", "]"}], ",", "t", ",", ".1", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}], ",", 
+   RowBox[{"Scale", "->", 
+    FractionBox["1", "2"]}]}], "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->23201],
+
+Cell[BoxData[
+ RowBox[{"0.02836622449405861`", "\[InvisibleSpace]", "-", 
+  RowBox[{"3.724118967894652`*^-8", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{172, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->773]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->25306],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->24780450],
+
+Cell[TextData[{
+ "With ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", "EulerSum"}]], "InlineFormula"],
+ ", ",
+ Cell[BoxData["ND"], "InlineFormula"],
+ " must be able to evaluate ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " at the point ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["x", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ ":"
+}], "ExampleText",
+ CellID->3080],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", "?", "NumericQ"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{"Tanh", "[", 
+    RowBox[{"\[Pi]", " ", "x"}], "]"}], 
+   RowBox[{"1", "+", 
+    SuperscriptBox["x", "2"]}]]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->31593],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", "x", ",", "I"}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->23990],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Power", "::", "\<\"infy\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Infinite expression \\\\\\\"\\\", \
+\\\"MSG\\\"]\\)\\!\\(1\\/\\(\\(\\(0.`\[InvisibleSpace]\\)\\) + \\(\\(0.`\\\\ \
+\[ImaginaryI]\\)\\)\\)\\)\\!\\(\\*StyleBox[\\\"\\\\\\\" \
+encountered.\\\\\\\"\\\", \\\"MSG\\\"]\\) \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet://Messages/General/infy\\\"]\\)\"\>"}]], "Message", \
+"MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->4591],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Infinity]", "::", "\<\"indet\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Indeterminate expression \\\\\\\"\\\
+\", \\\"MSG\\\"]\\)\\!\\(ComplexInfinity + \
+ComplexInfinity\\)\\!\\(\\*StyleBox[\\\"\\\\\\\" encountered.\\\\\\\"\\\", \\\
+\"MSG\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet://Messages/General/indet\\\"]\\)\"\>"}]], "Message", \
+"MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->24214],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Infinity]", "::", "\<\"indet\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Indeterminate expression \\\\\\\"\\\
+\", \\\"MSG\\\"]\\)\\!\\(ComplexInfinity + \
+ComplexInfinity\\)\\!\\(\\*StyleBox[\\\"\\\\\\\" encountered.\\\\\\\"\\\", \\\
+\"MSG\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet://Messages/General/indet\\\"]\\)\"\>"}]], "Message", \
+"MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->3223],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Infinity]", "::", "\<\"indet\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Indeterminate expression \\\\\\\"\\\
+\", \\\"MSG\\\"]\\)\\!\\(ComplexInfinity + \
+ComplexInfinity\\)\\!\\(\\*StyleBox[\\\"\\\\\\\" encountered.\\\\\\\"\\\", \\\
+\"MSG\\\"]\\) \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet://Messages/General/indet\\\"]\\)\"\>"}]], "Message", \
+"MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->5857],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"General", "::", "\<\"stop\"\>"}], ":", 
+  " ", "\<\"\\!\\(\\*StyleBox[\\\"\\\\\\\"Further output of \\\\\\\"\\\", \
+\\\"MSG\\\"]\\)\\!\\(\[Infinity] :: \
+\\\"indet\\\"\\)\\!\\(\\*StyleBox[\\\"\\\\\\\" will be suppressed during this \
+calculation.\\\\\\\"\\\", \\\"MSG\\\"]\\) \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet://Messages/General/stop\\\"]\\)\"\>"}]], "Message", \
+"MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->2700],
+
+Cell[BoxData["Indeterminate"], "Output",
+ ImageSize->{95, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->18849]
+}, Open  ]],
+
+Cell[TextData[{
+ "Adding an additional definition for ",
+ Cell[BoxData[
+  StyleBox["f", "TI"]], "InlineFormula"],
+ " allows ",
+ Cell[BoxData["ND"], "InlineFormula"],
+ " to compute the derivative:"
+}], "ExampleText",
+ CellID->2322],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"I", "//", "N"}], "]"}], "=", 
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"Tanh", "[", 
+      RowBox[{"\[Pi]", " ", "x"}], "]"}], 
+     RowBox[{"1", "+", 
+      SuperscriptBox["x", "2"]}]], ",", 
+    RowBox[{"x", "->", "I"}]}], "]"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->13285],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"\[ImaginaryI]", " ", "\[Pi]"}], "2"]}]], "Output",
+ ImageSize->{34, 32},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->6762]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", "x", ",", "I"}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->2702],
+
+Cell[BoxData[
+ RowBox[{"0.7854017336217205`", "\[InvisibleSpace]", "+", 
+  RowBox[{"0.00004270855386688568`", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{164, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->1268]
+}, Open  ]],
+
+Cell["Check:", "ExampleText",
+ CellID->21374],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Limit", "[", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"Tanh", "[", 
+        RowBox[{"\[Pi]", " ", "x"}], "]"}], 
+       RowBox[{"1", "+", 
+        SuperscriptBox["x", "2"]}]], ",", "x"}], "]"}], ",", 
+    RowBox[{"x", "->", "I"}]}], "]"}], "//", "N"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->5152],
+
+Cell[BoxData["0.7853981633974483`"], "Output",
+ ImageSize->{60, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->23848]
+}, Open  ]],
+
+Cell[TextData[{
+ "In this case, ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Method",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Method"], "->", 
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"]}]], "InlineFormula"],
+ " produces a more accurate answer:"
+}], "ExampleText",
+ CellID->29235],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", "x", ",", "I", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}], ",", 
+   RowBox[{"Scale", "->", 
+    FractionBox["1", "10"]}]}], "]"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->28638],
+
+Cell[BoxData[
+ RowBox[{"0.7853981633974472`", "\[InvisibleSpace]", "+", 
+  RowBox[{"8.969364576509012`*^-16", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{170, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[7]=",
+ CellID->22762]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[TextData[{
+   "Neat Examples",
+   "\[NonBreakingSpace]\[NonBreakingSpace]",
+   Cell["(1)", "ExampleCount"]
+  }], "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ ShowCellLabel->True,
+ CellID->6272],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->243210088],
+
+Cell["Some fractional and complex derivatives can be computed:", "ExampleText",
+ CellID->1792],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{"x", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", 
+      FractionBox["1", "2"]}]}], "}"}], ",", "1", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->12200],
+
+Cell[BoxData[
+ RowBox[{"0.7522528886964267`", "\[InvisibleSpace]", "+", 
+  RowBox[{"9.070416050491317`*^-17", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{170, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->26343]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ND", "[", 
+  RowBox[{
+   SuperscriptBox["x", "4"], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "I"}], "}"}], ",", "1", ",", 
+   RowBox[{"Method", "->", "NIntegrate"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->17519],
+
+Cell[BoxData[
+ RowBox[{"0.06320276376510124`", "\[InvisibleSpace]", "+", 
+  RowBox[{"1.1142473372089585`", " ", "\[ImaginaryI]"}]}]], "Output",
+ ImageSize->{136, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->7481]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["\:53c2\:89c1",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->4208],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["NLimit",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/NLimit"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["NSeries",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/NSeries"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["D",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/D"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["NResidue",
+    BaseStyle->"Link",
+    ButtonData->"paclet:NumericalAnalysis/ref/NResidue"],
+   FontFamily->"Verdana"]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->25656]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["TUTORIALS",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "TutorialsSection",
+ CellID->31958],
+
+Cell[TextData[ButtonBox["Numerical Analysis Package",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:NumericalAnalysis/tutorial/NumericalAnalysis"]], "Tutorials",
+ CellID->20238]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->315086522],
+
+Cell[TextData[ButtonBox["BiGridGenerator",
+ BaseStyle->"Link",
+ ButtonData->"paclet:BiGridGenerator/guide/BiGridGenerator"]], "MoreAbout",
+ CellID->2842773]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"ND - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2016, 10, 20, 18, 31, 3.1578781}", "context" -> 
+    "BiGridGenerator`", "keywords" -> {}, "index" -> True, "label" -> 
+    "BiGridGenerator Paclet Symbol", "language" -> "zh", "paclet" -> 
+    "BiGridGenerator", "status" -> "None", "summary" -> 
+    "ND[expr, x, x_0] gives a numerical approximation to the derivative of \
+expr with respect to x at the point x_0.ND[expr, {x, n}, x_0] gives a \
+numerical approximation to the n\\[Null]^th derivative of expr.", 
+    "synonyms" -> {}, "title" -> "ND", "type" -> "Symbol", "uri" -> 
+    "BiGridGenerator/ref/ND"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (2013\:5e742\:670813\
+\:65e5)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference-ja.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "9.0 for Microsoft Windows (64-bit) (2013\:5e742\:670813\:65e5)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[13811, 448, 465, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->447776111]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 66778, 2507}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[595, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[674, 24, 209, 6, 70, "LinkTrail"],
+Cell[886, 32, 3289, 75, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[4178, 109, 104, 2, 70, "ObjectName",
+ CellID->14331],
+Cell[CellGroupData[{
+Cell[4307, 115, 2102, 60, 70, "Usage",
+ CellID->7970],
+Cell[CellGroupData[{
+Cell[6434, 179, 564, 16, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->14320580],
+Cell[7001, 197, 393, 14, 70, "Notes",
+ CellID->26053],
+Cell[7397, 213, 575, 23, 70, "Notes",
+ CellID->8768],
+Cell[7975, 238, 331, 9, 70, "Notes",
+ CellID->28052],
+Cell[8309, 249, 212, 4, 70, "Notes",
+ CellID->13178],
+Cell[8524, 255, 1217, 30, 70, "3ColumnTableMod",
+ CellID->11156],
+Cell[9744, 287, 199, 8, 70, "Notes",
+ CellID->24981],
+Cell[9946, 297, 568, 14, 70, "2ColumnTableMod",
+ CellID->12695],
+Cell[10517, 313, 447, 19, 70, "Notes",
+ CellID->17586],
+Cell[10967, 334, 351, 13, 70, "Notes",
+ CellID->13929],
+Cell[11321, 349, 449, 16, 70, "Notes",
+ CellID->731],
+Cell[11773, 367, 455, 14, 70, "Notes",
+ CellID->4278],
+Cell[12231, 383, 460, 16, 70, "Notes",
+ CellID->17859],
+Cell[12694, 401, 524, 20, 70, "Notes",
+ CellID->8752],
+Cell[13221, 423, 541, 19, 70, "Notes",
+ CellID->5089]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13811, 448, 465, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->447776111],
+Cell[CellGroupData[{
+Cell[14301, 465, 141, 5, 70, "ExampleSection",
+ CellID->1014783385],
+Cell[14445, 472, 126, 3, 70, "Input",
+ CellID->553284329],
+Cell[CellGroupData[{
+Cell[14596, 479, 158, 5, 70, "Input",
+ CellID->19511],
+Cell[14757, 486, 171, 5, 36, "Output",
+ CellID->32174]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14965, 496, 233, 8, 70, "Input",
+ CellID->28819],
+Cell[15201, 506, 188, 6, 36, "Output",
+ CellID->26107]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15438, 518, 238, 8, 70, "ExampleSection",
+ CellID->22599],
+Cell[15679, 528, 126, 3, 70, "Input",
+ CellID->131317981],
+Cell[15808, 533, 88, 1, 70, "ExampleText",
+ CellID->788],
+Cell[CellGroupData[{
+Cell[15921, 538, 186, 6, 70, "Input",
+ CellID->13261],
+Cell[16110, 546, 273, 7, 36, "Output",
+ CellID->29045]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16420, 558, 207, 7, 70, "Input",
+ CellID->24435],
+Cell[16630, 567, 268, 7, 36, "Output",
+ CellID->7492]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[16947, 580, 260, 8, 70, "ExampleSection",
+ CellID->5732],
+Cell[17210, 590, 126, 3, 70, "Input",
+ CellID->191528983],
+Cell[17339, 595, 119, 4, 70, "ExampleText",
+ CellID->30076],
+Cell[CellGroupData[{
+Cell[17483, 603, 244, 9, 70, "Input",
+ CellID->4667],
+Cell[17730, 614, 233, 7, 36, "Output",
+ CellID->403]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[18012, 627, 240, 8, 70, "ExampleSection",
+ CellID->18367],
+Cell[CellGroupData[{
+Cell[18277, 639, 223, 7, 70, "ExampleSubsection",
+ CellID->18899],
+Cell[18503, 648, 126, 3, 70, "Input",
+ CellID->390580160],
+Cell[18632, 653, 449, 17, 70, "ExampleText",
+ CellID->21054],
+Cell[CellGroupData[{
+Cell[19106, 674, 218, 8, 70, "Input",
+ CellID->10167],
+Cell[19327, 684, 172, 5, 36, "Output",
+ CellID->19212]
+}, Open  ]],
+Cell[19514, 692, 45, 1, 70, "ExampleText",
+ CellID->26114],
+Cell[CellGroupData[{
+Cell[19584, 697, 332, 11, 70, "Input",
+ CellID->30129],
+Cell[19919, 710, 171, 5, 36, "Output",
+ CellID->5793]
+}, Open  ]],
+Cell[20105, 718, 327, 12, 70, "ExampleText",
+ CellID->11977],
+Cell[CellGroupData[{
+Cell[20457, 734, 264, 8, 70, "Input",
+ CellID->29854],
+Cell[20724, 744, 274, 7, 36, "Output",
+ CellID->15012]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21035, 756, 120, 3, 70, "ExampleDelimiter",
+ CellID->6831],
+Cell[21158, 761, 126, 3, 70, "Input",
+ CellID->270734359],
+Cell[21287, 766, 100, 2, 70, "ExampleText",
+ CellID->14889],
+Cell[CellGroupData[{
+Cell[21412, 772, 233, 8, 70, "Input",
+ CellID->23326],
+Cell[21648, 782, 171, 5, 36, "Output",
+ CellID->32647]
+}, Open  ]],
+Cell[21834, 790, 61, 1, 70, "ExampleText",
+ CellID->11299],
+Cell[CellGroupData[{
+Cell[21920, 795, 275, 10, 70, "Input",
+ CellID->2489],
+Cell[22198, 807, 171, 5, 36, "Output",
+ CellID->29674]
+}, Open  ]],
+Cell[22384, 815, 349, 12, 70, "ExampleText",
+ CellID->25836],
+Cell[CellGroupData[{
+Cell[22758, 831, 281, 9, 70, "Input",
+ CellID->6612],
+Cell[23042, 842, 271, 7, 36, "Output",
+ CellID->24387]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[23374, 856, 222, 7, 70, "ExampleSubsection",
+ CellID->11957],
+Cell[23599, 865, 125, 3, 70, "Input",
+ CellID->98964196],
+Cell[23727, 870, 277, 10, 70, "ExampleText",
+ CellID->15503],
+Cell[CellGroupData[{
+Cell[24029, 884, 180, 6, 70, "Input",
+ CellID->19491],
+Cell[24212, 892, 172, 5, 36, "Output",
+ CellID->10482]
+}, Open  ]],
+Cell[24399, 900, 132, 5, 70, "ExampleText",
+ CellID->2829],
+Cell[CellGroupData[{
+Cell[24556, 909, 221, 7, 70, "Input",
+ CellID->27027],
+Cell[24780, 918, 172, 5, 36, "Output",
+ CellID->13361]
+}, Open  ]],
+Cell[24967, 926, 319, 10, 70, "ExampleText",
+ CellID->952],
+Cell[CellGroupData[{
+Cell[25311, 940, 219, 7, 70, "Input",
+ CellID->8496],
+Cell[25533, 949, 171, 5, 36, "Output",
+ CellID->5646]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25741, 959, 121, 3, 70, "ExampleDelimiter",
+ CellID->15183],
+Cell[25865, 964, 126, 3, 70, "Input",
+ CellID->423400582],
+Cell[25994, 969, 421, 14, 70, "ExampleText",
+ CellID->15597],
+Cell[CellGroupData[{
+Cell[26440, 987, 207, 7, 70, "Input",
+ CellID->11554],
+Cell[26650, 996, 156, 5, 36, "Output",
+ CellID->25032]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26843, 1006, 266, 9, 70, "Input",
+ CellID->18102],
+Cell[27112, 1017, 172, 6, 36, "Output",
+ CellID->5945]
+}, Open  ]],
+Cell[27299, 1026, 45, 1, 70, "ExampleText",
+ CellID->20476],
+Cell[CellGroupData[{
+Cell[27369, 1031, 230, 8, 70, "Input",
+ CellID->28224],
+Cell[27602, 1041, 1626, 36, 166, "Output",
+ CellID->9081]
+}, Open  ]],
+Cell[29243, 1080, 80, 1, 70, "ExampleText",
+ CellID->22195],
+Cell[CellGroupData[{
+Cell[29348, 1085, 271, 9, 70, "Input",
+ CellID->31623],
+Cell[29622, 1096, 269, 7, 36, "Output",
+ CellID->27632]
+}, Open  ]],
+Cell[29906, 1106, 45, 1, 70, "ExampleText",
+ CellID->28343],
+Cell[CellGroupData[{
+Cell[29976, 1111, 446, 16, 70, "Input",
+ CellID->22602],
+Cell[30425, 1129, 269, 7, 36, "Output",
+ CellID->15369]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30743, 1142, 120, 3, 70, "ExampleDelimiter",
+ CellID->3282],
+Cell[30866, 1147, 126, 3, 70, "Input",
+ CellID->222227622],
+Cell[30995, 1152, 377, 13, 70, "ExampleText",
+ CellID->19989],
+Cell[CellGroupData[{
+Cell[31397, 1169, 257, 8, 70, "Input",
+ CellID->14437],
+Cell[31657, 1179, 777, 15, 70, "Message",
+ CellID->21599],
+Cell[32437, 1196, 249, 7, 36, "Output",
+ CellID->35]
+}, Open  ]],
+Cell[32701, 1206, 204, 7, 70, "ExampleText",
+ CellID->3179],
+Cell[CellGroupData[{
+Cell[32930, 1217, 297, 9, 70, "Input",
+ CellID->19654],
+Cell[33230, 1228, 272, 7, 36, "Output",
+ CellID->24652]
+}, Open  ]],
+Cell[33517, 1238, 45, 1, 70, "ExampleText",
+ CellID->23399],
+Cell[CellGroupData[{
+Cell[33587, 1243, 249, 9, 70, "Input",
+ CellID->28350],
+Cell[33839, 1254, 170, 5, 36, "Output",
+ CellID->30132]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[34070, 1266, 222, 7, 70, "ExampleSubsection",
+ CellID->28945],
+Cell[34295, 1275, 126, 3, 70, "Input",
+ CellID->541718349],
+Cell[34424, 1280, 145, 4, 70, "ExampleText",
+ CellID->5293],
+Cell[CellGroupData[{
+Cell[34594, 1288, 233, 8, 70, "Input",
+ CellID->21871],
+Cell[34830, 1298, 188, 6, 36, "Output",
+ CellID->2649]
+}, Open  ]],
+Cell[35033, 1307, 45, 1, 70, "ExampleText",
+ CellID->22590],
+Cell[CellGroupData[{
+Cell[35103, 1312, 278, 10, 70, "Input",
+ CellID->29204],
+Cell[35384, 1324, 233, 7, 36, "Output",
+ CellID->32177]
+}, Open  ]],
+Cell[35632, 1334, 110, 3, 70, "ExampleText",
+ CellID->25705],
+Cell[CellGroupData[{
+Cell[35767, 1341, 309, 10, 70, "Input",
+ CellID->5319],
+Cell[36079, 1353, 322, 12, 50, "Output",
+ CellID->4750]
+}, Open  ]],
+Cell[36416, 1368, 142, 4, 70, "ExampleText",
+ CellID->897419669],
+Cell[CellGroupData[{
+Cell[36583, 1376, 273, 9, 70, "Input",
+ CellID->20228],
+Cell[36859, 1387, 170, 5, 36, "Output",
+ CellID->5722]
+}, Open  ]],
+Cell[37044, 1395, 154, 4, 70, "ExampleText",
+ CellID->29668],
+Cell[CellGroupData[{
+Cell[37223, 1403, 323, 10, 70, "Input",
+ CellID->8785],
+Cell[37549, 1415, 234, 7, 36, "Output",
+ CellID->23774]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[37832, 1428, 233, 7, 70, "ExampleSubsection",
+ CellID->19184],
+Cell[38068, 1437, 126, 3, 70, "Input",
+ CellID->389541661],
+Cell[38197, 1442, 284, 9, 70, "ExampleText",
+ CellID->6651],
+Cell[CellGroupData[{
+Cell[38506, 1455, 208, 7, 70, "Input",
+ CellID->18884],
+Cell[38717, 1464, 188, 6, 36, "Output",
+ CellID->27037]
+}, Open  ]],
+Cell[38920, 1473, 131, 4, 70, "ExampleText",
+ CellID->10915],
+Cell[CellGroupData[{
+Cell[39076, 1481, 299, 9, 70, "Input",
+ CellID->15189],
+Cell[39378, 1492, 192, 5, 36, "Output",
+ CellID->11681]
+}, Open  ]],
+Cell[39585, 1500, 355, 12, 70, "ExampleText",
+ CellID->19074],
+Cell[CellGroupData[{
+Cell[39965, 1516, 257, 8, 70, "Input",
+ CellID->13759],
+Cell[40225, 1526, 272, 7, 36, "Output",
+ CellID->5850]
+}, Open  ]],
+Cell[40512, 1536, 115, 3, 70, "ExampleText",
+ CellID->4546],
+Cell[CellGroupData[{
+Cell[40652, 1543, 257, 8, 70, "Input",
+ CellID->29260],
+Cell[40912, 1553, 776, 15, 70, "Message",
+ CellID->6427],
+Cell[41691, 1570, 266, 8, 36, "Output",
+ CellID->22233]
+}, Open  ]],
+Cell[41972, 1581, 231, 8, 70, "ExampleText",
+ CellID->9421],
+Cell[CellGroupData[{
+Cell[42228, 1593, 307, 9, 70, "Input",
+ CellID->3161],
+Cell[42538, 1604, 338, 10, 36, "Output",
+ CellID->27818]
+}, Open  ]],
+Cell[42891, 1617, 117, 3, 70, "ExampleText",
+ CellID->9546],
+Cell[CellGroupData[{
+Cell[43033, 1624, 296, 9, 70, "Input",
+ CellID->21350],
+Cell[43332, 1635, 272, 7, 36, "Output",
+ CellID->21263]
+}, Open  ]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[43665, 1649, 245, 8, 70, "ExampleSection",
+ CellID->16461],
+Cell[43913, 1659, 126, 3, 70, "Input",
+ CellID->106482491],
+Cell[44042, 1664, 196, 5, 70, "ExampleText",
+ CellID->21846],
+Cell[44241, 1671, 1005, 32, 70, "Input",
+ CellID->23458],
+Cell[45249, 1705, 633, 25, 70, "ExampleText",
+ CellID->9594],
+Cell[CellGroupData[{
+Cell[45907, 1734, 261, 9, 70, "Input",
+ CellID->27371],
+Cell[46171, 1745, 190, 6, 36, "Output",
+ CellID->17945]
+}, Open  ]],
+Cell[46376, 1754, 194, 5, 70, "ExampleText",
+ CellID->13502],
+Cell[46573, 1761, 1563, 47, 70, "Input",
+ CellID->8246],
+Cell[48139, 1810, 45, 1, 70, "ExampleText",
+ CellID->20420],
+Cell[CellGroupData[{
+Cell[48209, 1815, 146, 5, 70, "Input",
+ CellID->25254],
+Cell[48358, 1822, 189, 6, 36, "Output",
+ CellID->7953]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[48596, 1834, 255, 8, 70, "ExampleSection",
+ CellID->15760],
+Cell[48854, 1844, 126, 3, 70, "Input",
+ CellID->907180813],
+Cell[48983, 1849, 354, 12, 70, "ExampleText",
+ CellID->3586],
+Cell[CellGroupData[{
+Cell[49362, 1865, 282, 9, 70, "Input",
+ CellID->25419],
+Cell[49647, 1876, 273, 7, 36, "Output",
+ CellID->28735]
+}, Open  ]],
+Cell[49935, 1886, 247, 8, 70, "ExampleText",
+ CellID->16616],
+Cell[CellGroupData[{
+Cell[50207, 1898, 349, 13, 70, "Input",
+ CellID->13335],
+Cell[50559, 1913, 272, 7, 36, "Output",
+ CellID->28592]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50868, 1925, 121, 3, 70, "ExampleDelimiter",
+ CellID->29018],
+Cell[50992, 1930, 126, 3, 70, "Input",
+ CellID->373729283],
+Cell[51121, 1935, 167, 5, 70, "ExampleText",
+ CellID->9265],
+Cell[51291, 1942, 252, 9, 70, "Input",
+ CellID->9370],
+Cell[51546, 1953, 157, 4, 70, "ExampleText",
+ CellID->22336],
+Cell[CellGroupData[{
+Cell[51728, 1961, 112, 4, 70, "Input",
+ CellID->26525],
+Cell[51843, 1967, 174, 5, 36, "Output",
+ CellID->12746]
+}, Open  ]],
+Cell[52032, 1975, 58, 1, 70, "ExampleText",
+ CellID->17644],
+Cell[CellGroupData[{
+Cell[52115, 1980, 276, 10, 70, "Input",
+ CellID->19512],
+Cell[52394, 1992, 174, 5, 36, "Output",
+ CellID->29482]
+}, Open  ]],
+Cell[52583, 2000, 168, 5, 70, "ExampleText",
+ CellID->2815],
+Cell[CellGroupData[{
+Cell[52776, 2009, 196, 6, 70, "Input",
+ CellID->5105],
+Cell[52975, 2017, 174, 5, 36, "Output",
+ CellID->25726]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53186, 2027, 268, 8, 70, "Input",
+ CellID->23201],
+Cell[53457, 2037, 271, 7, 36, "Output",
+ CellID->773]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53777, 2050, 121, 3, 70, "ExampleDelimiter",
+ CellID->25306],
+Cell[53901, 2055, 125, 3, 70, "Input",
+ CellID->24780450],
+Cell[54029, 2060, 469, 19, 70, "ExampleText",
+ CellID->3080],
+Cell[54501, 2081, 281, 10, 70, "Input",
+ CellID->31593],
+Cell[CellGroupData[{
+Cell[54807, 2095, 156, 5, 70, "Input",
+ CellID->23990],
+Cell[54966, 2102, 567, 11, 70, "Message",
+ CellID->4591],
+Cell[55536, 2115, 536, 11, 70, "Message",
+ CellID->24214],
+Cell[56075, 2128, 535, 11, 70, "Message",
+ CellID->3223],
+Cell[56613, 2141, 535, 11, 70, "Message",
+ CellID->5857],
+Cell[57151, 2154, 548, 11, 70, "Message",
+ CellID->2700],
+Cell[57702, 2167, 166, 5, 36, "Output",
+ CellID->18849]
+}, Open  ]],
+Cell[57883, 2175, 230, 8, 70, "ExampleText",
+ CellID->2322],
+Cell[CellGroupData[{
+Cell[58138, 2187, 365, 13, 70, "Input",
+ CellID->13285],
+Cell[58506, 2202, 231, 8, 53, "Output",
+ CellID->6762]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58774, 2215, 155, 5, 70, "Input",
+ CellID->2702],
+Cell[58932, 2222, 272, 7, 36, "Output",
+ CellID->1268]
+}, Open  ]],
+Cell[59219, 2232, 45, 1, 70, "ExampleText",
+ CellID->21374],
+Cell[CellGroupData[{
+Cell[59289, 2237, 378, 13, 70, "Input",
+ CellID->5152],
+Cell[59670, 2252, 172, 5, 36, "Output",
+ CellID->23848]
+}, Open  ]],
+Cell[59857, 2260, 336, 12, 70, "ExampleText",
+ CellID->29235],
+Cell[CellGroupData[{
+Cell[60218, 2276, 268, 8, 70, "Input",
+ CellID->28638],
+Cell[60489, 2286, 273, 7, 36, "Output",
+ CellID->22762]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[60823, 2300, 245, 8, 70, "ExampleSection",
+ CellID->6272],
+Cell[61071, 2310, 126, 3, 70, "Input",
+ CellID->243210088],
+Cell[61200, 2315, 94, 1, 70, "ExampleText",
+ CellID->1792],
+Cell[CellGroupData[{
+Cell[61319, 2320, 271, 9, 70, "Input",
+ CellID->12200],
+Cell[61593, 2331, 273, 7, 36, "Output",
+ CellID->26343]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61903, 2343, 250, 8, 70, "Input",
+ CellID->17519],
+Cell[62156, 2353, 269, 7, 36, "Output",
+ CellID->7481]
+}, Open  ]]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62486, 2367, 415, 12, 70, "SeeAlsoSection",
+ CellID->4208],
+Cell[62904, 2381, 1080, 38, 70, "SeeAlso",
+ CellID->25656]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64021, 2424, 415, 12, 70, "TutorialsSection",
+ CellID->31958],
+Cell[64439, 2438, 175, 4, 70, "Tutorials",
+ CellID->20238]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64651, 2447, 420, 12, 70, "MoreAboutSection",
+ CellID->315086522],
+Cell[65074, 2461, 156, 3, 70, "MoreAbout",
+ CellID->2842773]
+}, Open  ]],
+Cell[65245, 2467, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
