@@ -1,4 +1,24 @@
-Clear["`*"]
+(* Mathematica Package *)
+(* Created by Mathematica Plugin for IntelliJ IDEA *)
+
+(* :Title: NumberAndLanguage *)
+(* :Context: NumberAndLanguage` *)
+(* :Author: GalAster *)
+(* :Date: 2016-04-12 *)
+
+(* :Package Version: 0.5 *)
+(* :Update: 2016-10-21 *)
+(* :Mathematica Version: 11.0+ *)
+(* :Copyright:该软件包遵从CC协议:BY+NA+NC(署名、非商业性使用、相同方式共享） *)
+(* :Keywords: *)
+(* :Discussion: *)
+
+BeginPackage["NumberAndLanguage`"];
+
+
+
+
+Begin["`Private`"];
 简体中文小写={{零,13},{一,1},{二,2},{三,3},{四,5},{五,4},{六,4},{七,2},{八,2},{九,2},{十,2},{百,6},{千,3},{万,3}};
 简体中文大写={{零,13},{壹,12},{贰,9},{叁,8},{肆,13},{伍,6},{陆,7},{柒,9},{捌,10},{玖,7},{拾,10},{佰,8},{仟,5},{万,3}};
 繁体中文数字={{零,13},{壹,12},{貳,9},{三,3},{肆,13},{伍,6},{陸,10},{柒,9},{捌,10},{玖,7},{拾,10},{佰,8},{仟,5},{萬,12}};
@@ -75,3 +95,12 @@ NumberToGerman[n_Integer/;21<=n<=99]:=AuxGerman2[[Mod[n,10]]]<>"und"<>AuxGerman2
 ResGerman=Graph[#\[DirectedEdge]GermanToNumber@NumberToGerman@#&/@Range[0,49],VertexLabels->Placed["Name",Center],VertexLabelStyle->Directive[12,Lighter@Blue,Bold],
   VertexSize->0.6,EdgeShapeFunction->GraphElementData["ShortFilledArrow","ArrowSize"->0.01],
   GraphLayout->"SpringElectricalEmbedding",ImageSize->Full];
+End[];
+
+
+
+SetAttributes[{},Listable];
+SetAttributes[{},Protected];
+SetAttributes[{},ReadProtected];
+SetAttributes[{},Locked];
+EndPackage[]

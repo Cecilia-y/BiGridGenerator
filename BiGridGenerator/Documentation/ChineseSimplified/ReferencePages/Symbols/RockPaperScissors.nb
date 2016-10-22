@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    183901,       3791]
-NotebookOptionsPosition[    178964,       3608]
-NotebookOutlinePosition[    179593,       3633]
-CellTagsIndexPosition[    179512,       3628]
+NotebookDataLength[    184710,       3813]
+NotebookOptionsPosition[    179603,       3624]
+NotebookOutlinePosition[    180232,       3649]
+CellTagsIndexPosition[    180151,       3644]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1855,11 +1855,11 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{
-  DynamicModuleBox[{RockPaperScissors`Private`history$$ = {{1, 3}, {2, 2}, {3,
-    3}, {1, 2}, {3, 2}, {1, 1}, {2, 1}}, RockPaperScissors`Private`hLast$$ = 
-   2, RockPaperScissors`Private`cLast$$ = 1, 
-   RockPaperScissors`Private`hScore$$ = 3, 
-   RockPaperScissors`Private`cScore$$ = 1, 
+  DynamicModuleBox[{RockPaperScissors`Private`history$$ = {{2, 2}, {3, 2}, {1,
+    3}, {3, 2}, {2, 1}, {3, 2}, {3, 3}, {3, 2}, {1, 1}, {3, 2}, {3, 2}}, 
+   RockPaperScissors`Private`hLast$$ = 3, RockPaperScissors`Private`cLast$$ = 
+   2, RockPaperScissors`Private`hScore$$ = 8, 
+   RockPaperScissors`Private`cScore$$ = 0, 
    RockPaperScissors`Private`message$$ = "Youwin"}, 
    PanelBox[
     TagBox[GridBox[{
@@ -3603,11 +3603,27 @@ O3bs4LFj75thzx49DD16PDDDwvpbld9WoUKFChUqVKhQoUKFCv83+H+Q1yGn
    3.6851860662436337`*^9}, {3.685186123637518*^9, 3.685186135057173*^9}, 
    3.6859477056434784`*^9}]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\:7b97\:6cd5\:6548\:7387\:6d4b\:7b97"], "ExampleSection",
+ ShowCellLabel->True,
+ CellChangeTimes->{{3.685185803075656*^9, 3.6851858043301573`*^9}, {
+  3.6851862273940005`*^9, 3.685186239289921*^9}},
+ CellID->199054943],
+
+Cell["\:4e0d\:9700\:8981,\:8be5\:8f6f\:4ef6\:5305\:6240\:6709\:7684\:51fd\
+\:6570\:90fd\:5f88\:5b89\:5168.", "ExampleText",
+ CellChangeTimes->{{3.6851878191106443`*^9, 3.685187825815522*^9}, {
+   3.685188318640326*^9, 3.6851883203908887`*^9}, 3.685188460859439*^9, {
+   3.686119983318159*^9, 3.686120000320238*^9}},
+ CellID->120218513]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{700, 770},
-WindowMargins->{{Automatic, 533}, {72, Automatic}},
+WindowMargins->{{Automatic, 324}, {Automatic, 81}},
 CellContext->"Global`",
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (2013\:5e742\:670813\
 \:65e5)",
@@ -3627,7 +3643,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 179378, 3621}
+ {"ExtendedExamples", 180017, 3637}
  }
 *)
 (*NotebookFileOutline
@@ -3789,8 +3805,14 @@ Cell[74251, 1831, 658, 12, 33, "ExampleText",
 Cell[CellGroupData[{
 Cell[74934, 1847, 312, 6, 27, "Input",
  CellID->4667],
-Cell[75249, 1855, 103675, 1748, 278, "Output"]
+Cell[75249, 1855, 103707, 1748, 278, "Output"]
 }, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[179005, 3609, 232, 4, 30, "ExampleSection",
+ CellID->199054943],
+Cell[179240, 3615, 335, 5, 20, "ExampleText",
+ CellID->120218513]
 }, Open  ]]
 }, Open  ]]
 }
