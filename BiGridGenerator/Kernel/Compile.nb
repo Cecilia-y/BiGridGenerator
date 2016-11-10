@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3708,        113]
-NotebookOptionsPosition[      3201,         90]
-NotebookOutlinePosition[      3558,        106]
-CellTagsIndexPosition[      3515,        103]
+NotebookDataLength[      3973,        118]
+NotebookOptionsPosition[      3466,         95]
+NotebookOutlinePosition[      3823,        111]
+CellTagsIndexPosition[      3780,        108]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,16 +38,18 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"\<\"RockPaperScissors`\"\>", ",", "\<\"SortAlgorithm`\"\>", 
-   ",", "\<\"MagicSquare`\"\>", ",", "\<\"CloudObjectLoader`\"\>", 
+   ",", "\<\"MagicSquare`\"\>", ",", "\<\"ExData`\"\>", 
+   ",", "\<\"StreamingLoader`\"\>", 
    ",", "\<\"SymbolicMachineLearningLoader`\"\>", 
-   ",", "\<\"StreamingLoader`\"\>", ",", "\<\"NeuralNetworks`\"\>", 
-   ",", "\<\"IconizeLoader`\"\>", ",", "\<\"HTTPHandlingLoader`\"\>", 
+   ",", "\<\"NeuralNetworks`\"\>", ",", "\<\"IconizeLoader`\"\>", 
+   ",", "\<\"HTTPHandlingLoader`\"\>", ",", "\<\"CloudObjectLoader`\"\>", 
    ",", "\<\"PacletManager`\"\>", ",", "\<\"System`\"\>", 
    ",", "\<\"Global`\"\>"}], "}"}]], "Output",
  CellChangeTimes->{{3.685657936521076*^9, 3.685657950020793*^9}, 
    3.685840010267851*^9, {3.6858401003012776`*^9, 3.6858401311894703`*^9}, {
    3.6859451349956856`*^9, 3.6859451648220463`*^9}, {3.6859452838831353`*^9, 
-   3.6859452879521136`*^9}}]
+   3.6859452879521136`*^9}, 3.6877333236555777`*^9, 3.6877334072603135`*^9, 
+   3.687733486402337*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -61,17 +63,20 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], ",", 
-       "\"\<SortAlgorithm.mx\>\""}], "}"}], "]"}], ",", 
-    RowBox[{"{", "\"\<SortAlgorithm`\>\"", "}"}]}], "]"}]}]], "Input",
+       "\"\<RockPaperScissors.mx\>\""}], "}"}], "]"}], ",", 
+    RowBox[{"{", "\"\<RockPaperScissors`\>\"", "}"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.685657656189286*^9, 3.6856576793503284`*^9}, 
    3.685657743679457*^9, {3.6856578121645813`*^9, 3.685657841055133*^9}, {
    3.685657882500106*^9, 3.685657939937832*^9}, {3.685840105053113*^9, 
    3.6858401141518073`*^9}, {3.6859450873040895`*^9, 
-   3.6859451207943697`*^9}, {3.6859451727845373`*^9, 3.6859451784078507`*^9}}],
+   3.6859451207943697`*^9}, {3.6859451727845373`*^9, 
+   3.6859451784078507`*^9}, {3.6877333347922325`*^9, 3.687733348786109*^9}, {
+   3.6877334128977747`*^9, 3.687733419368373*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", "\<\"SortAlgorithm`\"\>", "}"}]], "Output",
- CellChangeTimes->{3.685945178946041*^9}]
+ RowBox[{"{", "\<\"RockPaperScissors`\"\>", "}"}]], "Output",
+ CellChangeTimes->{3.685945178946041*^9, 3.687733351293109*^9, 
+  3.687733420700883*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -108,13 +113,13 @@ Notebook[{
 Cell[558, 20, 309, 7, 66, "Input"],
 Cell[CellGroupData[{
 Cell[892, 31, 203, 4, 66, "Input"],
-Cell[1098, 37, 715, 12, 69, "Output"]
+Cell[1098, 37, 817, 14, 69, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1850, 54, 737, 15, 66, "Input"],
-Cell[2590, 71, 113, 2, 30, "Output"]
+Cell[1952, 56, 849, 17, 87, "Input"],
+Cell[2804, 75, 164, 3, 30, "Output"]
 }, Open  ]],
-Cell[2718, 76, 479, 12, 66, "Input"]
+Cell[2983, 81, 479, 12, 66, "Input"]
 }
 ]
 *)
